@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Join StudentFreelance Hub</title>
+  <meta name="description" content="Join StudentFreelance Hub - Sign up as a student freelancer or client to start connecting with opportunities.">
+  <meta name="keywords" content="signup, student freelancer registration, join platform, create account">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Sign Up - StudentFreelance Hub">
+  <meta property="og:description" content="Join the leading platform connecting student freelancers with opportunities">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://studentfreelancehub.com/signup">
+  
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'cyber-blue': '#00D4FF',
+            'electric-purple': '#8B5CF6',
+            'neon-green': '#10B981',
+            'dark-slate': '#0F172A',
+            'tech-gray': '#1E293B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-slate text-white font-sofia min-h-screen">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Main Signup Section -->
+  <section class="pt-20 pb-16 min-h-screen flex items-center" data-id="signup-section">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-12" data-id="signup-header">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="signup-title">
+            Join StudentFreelance Hub
+          </h1>
+          <p class="text-xl text-gray-300 mb-8" data-id="signup-subtitle">
+            Start your journey as a freelancer or find talented students for your projects
+          </p>
+        </div>
+
+        <!-- User Type Selection -->
+        <div class="mb-8" data-id="user-type-selection">
+          <h2 class="text-2xl font-bold mb-6 text-center text-white" data-id="user-type-title">Choose Your Account Type</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <!-- Student/Freelancer Option -->
+            <div class="user-type-card bg-tech-gray border-2 border-cyber-blue/20 rounded-xl p-6 cursor-pointer hover:border-cyber-blue/60 transition-all duration-300 transform hover:scale-105" 
+                 data-id="freelancer-option" data-type="freelancer">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-cyber-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i data-lucide="user" class="w-8 h-8 text-cyber-blue"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-cyber-blue">I'm a Student Freelancer</h3>
+                <p class="text-gray-300">I want to offer my skills and find freelance opportunities</p>
+                <ul class="text-sm text-gray-400 mt-4 space-y-1">
+                  <li>• Build your portfolio</li>
+                  <li>• Find paid projects</li>
+                  <li>• Gain real experience</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Client Option -->
+            <div class="user-type-card bg-tech-gray border-2 border-electric-purple/20 rounded-xl p-6 cursor-pointer hover:border-electric-purple/60 transition-all duration-300 transform hover:scale-105" 
+                 data-id="client-option" data-type="client">
+              <div class="text-center">
+                <div class="w-16 h-16 bg-electric-purple/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <i data-lucide="briefcase" class="w-8 h-8 text-electric-purple"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 text-electric-purple">I'm Looking to Hire</h3>
+                <p class="text-gray-300">I want to find talented students for my projects</p>
+                <ul class="text-sm text-gray-400 mt-4 space-y-1">
+                  <li>• Access fresh talent</li>
+                  <li>• Cost-effective solutions</li>
+                  <li>• Support education</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="max-w-2xl mx-auto">
+          <form id="signup-form" class="bg-tech-gray rounded-xl p-8 border border-gray-700" data-id="signup-form">
+            <!-- Basic Information -->
+            <div class="mb-8" data-id="basic-info-section">
+              <h3 class="text-xl font-bold mb-4 text-white">Basic Information</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div data-id="first-name-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="firstName">First Name *</label>
+                  <input 
+                    type="text" 
+                    id="firstName" 
+                    name="firstName" 
+                    required
+                    class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                    placeholder="Enter your first name"
+                  >
+                  <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                </div>
+
+                <div data-id="last-name-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="lastName">Last Name *</label>
+                  <input 
+                    type="text" 
+                    id="lastName" 
+                    name="lastName" 
+                    required
+                    class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                    placeholder="Enter your last name"
+                  >
+                  <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                </div>
+              </div>
+
+              <div class="mt-6" data-id="email-field">
+                <label class="block text-sm font-medium mb-2 text-gray-300" for="email">Email Address *</label>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email" 
+                  required
+                  class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                  placeholder="Enter your email address"
+                >
+                <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div data-id="password-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="password">Password *</label>
+                  <div class="relative">
+                    <input 
+                      type="password" 
+                      id="password" 
+                      name="password" 
+                      required
+                      class="w-full px-4 py-3 pr-12 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                      placeholder="Create a strong password"
+                    >
+                    <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white" data-id="toggle-password">
+                      <i data-lucide="eye" class="w-5 h-5"></i>
+                    </button>
+                  </div>
+                  <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                  <div class="text-xs text-gray-400 mt-1">At least 8 characters with numbers and symbols</div>
+                </div>
+
+                <div data-id="confirm-password-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="confirmPassword">Confirm Password *</label>
+                  <input 
+                    type="password" 
+                    id="confirmPassword" 
+                    name="confirmPassword" 
+                    required
+                    class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                    placeholder="Confirm your password"
+                  >
+                  <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Freelancer Specific Fields -->
+            <div id="freelancer-fields" class="mb-8 hidden" data-id="freelancer-fields">
+              <h3 class="text-xl font-bold mb-4 text-cyan-400">Freelancer Information</h3>
+              
+              <div class="mb-6" data-id="university-field">
+                <label class="block text-sm font-medium mb-2 text-gray-300" for="university">University/Institution *</label>
+                <input 
+                  type="text" 
+                  id="university" 
+                  name="university"
+                  class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                  placeholder="Enter your university name"
+                >
+                <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div data-id="major-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="major">Major/Field of Study *</label>
+                  <select 
+                    id="major" 
+                    name="major"
+                    class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                  >
+                    <option value="">Select your major</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="graphic-design">Graphic Design</option>
+                    <option value="digital-marketing">Digital Marketing</option>
+                    <option value="data-science">Data Science</option>
+                    <option value="mobile-development">Mobile Development</option>
+                    <option value="ui-ux-design">UI/UX Design</option>
+                    <option value="content-writing">Content Writing</option>
+                    <option value="business">Business</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                </div>
+
+                <div data-id="year-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="academicYear">Academic Year *</label>
+                  <select 
+                    id="academicYear" 
+                    name="academicYear"
+                    class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                  >
+                    <option value="">Select your year</option>
+                    <option value="freshman">Freshman (1st Year)</option>
+                    <option value="sophomore">Sophomore (2nd Year)</option>
+                    <option value="junior">Junior (3rd Year)</option>
+                    <option value="senior">Senior (4th Year)</option>
+                    <option value="graduate">Graduate Student</option>
+                    <option value="recent-graduate">Recent Graduate</option>
+                  </select>
+                  <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                </div>
+              </div>
+
+              <div data-id="skills-field">
+                <label class="block text-sm font-medium mb-2 text-gray-300" for="skills">Skills & Expertise *</label>
+                <textarea 
+                  id="skills" 
+                  name="skills"
+                  rows="3"
+                  class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white resize-none"
+                  placeholder="List your key skills (e.g., JavaScript, Python, Photoshop, SEO, etc.)"
+                ></textarea>
+                <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+              </div>
+            </div>
+
+            <!-- Client Specific Fields -->
+            <div id="client-fields" class="mb-8 hidden" data-id="client-fields">
+              <h3 class="text-xl font-bold mb-4 text-purple-400">Client Information</h3>
+              
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div data-id="company-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="company">Company/Organization</label>
+                  <input 
+                    type="text" 
+                    id="company" 
+                    name="company"
+                    class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                    placeholder="Enter company name (optional)"
+                  >
+                </div>
+
+                <div data-id="industry-field">
+                  <label class="block text-sm font-medium mb-2 text-gray-300" for="industry">Industry *</label>
+                  <select 
+                    id="industry" 
+                    name="industry"
+                    class="w-full px-4 py-3 bg-dark-slate border border-gray-600 rounded-lg focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue outline-none transition-colors text-white"
+                  >
+                    <option value="">Select industry</option>
+                    <option value="technology">Technology</option>
+                    <option value="healthcare">Healthcare</option>
+                    <option value="education">Education</option>
+                    <option value="finance">Finance</option>
+                    <option value="retail">Retail</option>
+                    <option value="marketing">Marketing</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="nonprofit">Non-Profit</option>
+                    <option value="startup">Startup</option>
+                    <option value="other">Other</option>
+                  </select>
+                  <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+                </div>
+              </div>
+
+              <div data-id="project-types-field">
+                <label class="block text-sm font-medium mb-2 text-gray-300">Types of Projects You're Interested In *</label>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mt-3">
+                  <label class="flex items-center space-x-2 text-gray-300">
+                    <input type="checkbox" name="projectTypes" value="web-development" class="rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                    <span class="text-sm">Web Development</span>
+                  </label>
+                  <label class="flex items-center space-x-2 text-gray-300">
+                    <input type="checkbox" name="projectTypes" value="mobile-apps" class="rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                    <span class="text-sm">Mobile Apps</span>
+                  </label>
+                  <label class="flex items-center space-x-2 text-gray-300">
+                    <input type="checkbox" name="projectTypes" value="graphic-design" class="rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                    <span class="text-sm">Graphic Design</span>
+                  </label>
+                  <label class="flex items-center space-x-2 text-gray-300">
+                    <input type="checkbox" name="projectTypes" value="content-writing" class="rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                    <span class="text-sm">Content Writing</span>
+                  </label>
+                  <label class="flex items-center space-x-2 text-gray-300">
+                    <input type="checkbox" name="projectTypes" value="digital-marketing" class="rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                    <span class="text-sm">Digital Marketing</span>
+                  </label>
+                  <label class="flex items-center space-x-2 text-gray-300">
+                    <input type="checkbox" name="projectTypes" value="data-analysis" class="rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                    <span class="text-sm">Data Analysis</span>
+                  </label>
+                </div>
+                <div class="error-message text-red-400 text-sm mt-1 hidden"></div>
+              </div>
+            </div>
+
+            <!-- Terms and Newsletter -->
+            <div class="mb-8" data-id="agreement-section">
+              <div class="space-y-4">
+                <label class="flex items-start space-x-3 text-gray-300" data-id="terms-agreement">
+                  <input type="checkbox" id="agreeTerms" name="agreeTerms" required class="mt-1 rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                  <span class="text-sm">
+                    I agree to the <a href="#" class="text-cyber-blue hover:underline">Terms of Service</a> and 
+                    <a href="#" class="text-cyber-blue hover:underline">Privacy Policy</a> *
+                  </span>
+                </label>
+                
+                <label class="flex items-start space-x-3 text-gray-300" data-id="newsletter-signup">
+                  <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 rounded border-gray-600 bg-dark-slate text-cyber-blue focus:ring-cyber-blue">
+                  <span class="text-sm">
+                    I want to receive updates about new opportunities and platform features
+                  </span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center" data-id="submit-section">
+              <button 
+                type="submit" 
+                id="signup-btn"
+                class="w-full md:w-auto px-12 py-4 bg-gradient-to-r from-cyber-blue to-electric-purple text-white font-bold rounded-lg hover:from-cyber-blue/80 hover:to-electric-purple/80 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-cyber-blue/50"
+                data-id="signup-button"
+              >
+                <span class="signup-text">Create Account</span>
+                <i data-lucide="loader-2" class="w-5 h-5 ml-2 animate-spin hidden"></i>
+              </button>
+              
+              <p class="mt-6 text-gray-400" data-id="login-link">
+                Already have an account? 
+                <a href="login.html" class="text-cyber-blue hover:underline font-semibold">Sign In</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modal -->
+  <div id="success-modal" class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4" data-id="success-modal">
+    <div class="bg-tech-gray rounded-xl p-8 max-w-md w-full text-center border border-neon-green/20">
+      <div class="w-16 h-16 bg-neon-green/10 rounded-full flex items-center justify-center mx-auto mb-6">
+        <i data-lucide="check-circle" class="w-8 h-8 text-neon-green"></i>
+      </div>
+      <h3 class="text-2xl font-bold mb-4 text-neon-green">Account Created Successfully!</h3>
+      <p class="text-gray-300 mb-6">Welcome to StudentFreelance Hub. Please check your email to verify your account.</p>
+      <button id="close-modal" class="px-6 py-3 bg-neon-green text-dark-slate font-bold rounded-lg hover:bg-neon-green/90 transition-colors">
+        Get Started
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+
+    // User type selection
+    const userTypeCards = document.querySelectorAll('.user-type-card');
+    const freelancerFields = document.getElementById('freelancer-fields');
+    const clientFields = document.getElementById('client-fields');
+    let selectedUserType = null;
+
+    userTypeCards.forEach(card => {
+      card.addEventListener('click', () => {
+        // Remove active state from all cards
+        userTypeCards.forEach(c => {
+          c.classList.remove('ring-2', 'ring-cyber-blue', 'ring-electric-purple');
+          c.classList.add('border-2');
+        });
+        
+        // Add active state to clicked card
+        const userType = card.dataset.type;
+        selectedUserType = userType;
+        
+        if (userType === 'freelancer') {
+          card.classList.add('ring-2', 'ring-cyber-blue');
+          card.classList.remove('border-2');
+          freelancerFields.classList.remove('hidden');
+          clientFields.classList.add('hidden');
+          
+          // Make freelancer fields required
+          document.getElementById('university').required = true;
+          document.getElementById('major').required = true;
+          document.getElementById('academicYear').required = true;
+          document.getElementById('skills').required = true;
+          
+          // Remove client field requirements
+          document.getElementById('industry').required = false;
+        } else {
+          card.classList.add('ring-2', 'ring-electric-purple');
+          card.classList.remove('border-2');
+          clientFields.classList.remove('hidden');
+          freelancerFields.classList.add('hidden');
+          
+          // Make client fields required
+          document.getElementById('industry').required = true;
+          
+          // Remove freelancer field requirements
+          document.getElementById('university').required = false;
+          document.getElementById('major').required = false;
+          document.getElementById('academicYear').required = false;
+          document.getElementById('skills').required = false;
+        }
+      });
+    });
+
+    // Password visibility toggle
+    const togglePassword = document.querySelector('[data-id="toggle-password"]');
+    const passwordInput = document.getElementById('password');
+    
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      
+      const icon = togglePassword.querySelector('i');
+      if (type === 'password') {
+        icon.setAttribute('data-lucide', 'eye');
+      } else {
+        icon.setAttribute('data-lucide', 'eye-off');
+      }
+      lucide.createIcons();
+    });
+
+    // Form validation
+    const signupForm = document.getElementById('signup-form');
+    const signupBtn = document.getElementById('signup-btn');
+    const successModal = document.getElementById('success-modal');
+    
+    function showError(fieldName, message) {
+      const field = document.querySelector(`[name="${fieldName}"]`);
+      const errorDiv = field.parentElement.querySelector('.error-message');
+      
+      field.classList.add('border-red-400', 'focus:border-red-400', 'focus:ring-red-400');
+      errorDiv.textContent = message;
+      errorDiv.classList.remove('hidden');
+    }
+    
+    function clearError(fieldName) {
+      const field = document.querySelector(`[name="${fieldName}"]`);
+      const errorDiv = field.parentElement.querySelector('.error-message');
+      
+      field.classList.remove('border-red-400', 'focus:border-red-400', 'focus:ring-red-400');
+      errorDiv.classList.add('hidden');
+    }
+
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    function validatePassword(password) {
+      return password.length >= 8 && /\d/.test(password) && /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    }
+
+    signupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Clear all previous errors
+      document.querySelectorAll('.error-message').forEach(el => el.classList.add('hidden'));
+      document.querySelectorAll('input, select, textarea').forEach(el => {
+        el.classList.remove('border-red-400', 'focus:border-red-400', 'focus:ring-red-400');
+      });
+
+      let isValid = true;
+
+      // Validate user type selection
+      if (!selectedUserType) {
+        alert('Please select your account type (Student Freelancer or Client)');
+        return;
+      }
+
+      // Validate basic fields
+      const formData = new FormData(signupForm);
+      
+      if (!formData.get('firstName').trim()) {
+        showError('firstName', 'First name is required');
+        isValid = false;
+      }
+      
+      if (!formData.get('lastName').trim()) {
+        showError('lastName', 'Last name is required');
+        isValid = false;
+      }
+      
+      const email = formData.get('email');
+      if (!email || !validateEmail(email)) {
+        showError('email', 'Please enter a valid email address');
+        isValid = false;
+      }
+      
+      const password = formData.get('password');
+      if (!password || !validatePassword(password)) {
+        showError('password', 'Password must be at least 8 characters with numbers and symbols');
+        isValid = false;
+      }
+      
+      const confirmPassword = formData.get('confirmPassword');
+      if (password !== confirmPassword) {
+        showError('confirmPassword', 'Passwords do not match');
+        isValid = false;
+      }
+
+      // Validate user-type specific fields
+      if (selectedUserType === 'freelancer') {
+        if (!formData.get('university').trim()) {
+          showError('university', 'University is required');
+          isValid = false;
+        }
+        if (!formData.get('major')) {
+          showError('major', 'Please select yourmajor');
+          isValid = false;
+        }
+        if (!formData.get('academicYear')) {
+          showError('academicYear', 'Please select your academic year');
+          isValid = false;
+        }
+        if (!formData.get('skills').trim()) {
+          showError('skills', 'Please describe your skills');
+          isValid = false;
+        }
+      } else if (selectedUserType === 'client') {
+        if (!formData.get('industry')) {
+          showError('industry', 'Please select your industry');
+          isValid = false;
+        }
+        
+        // Check if at least one project type is selected
+        const projectTypes = formData.getAll('projectTypes');
+        if (projectTypes.length === 0) {
+          const errorDiv = document.querySelector('[data-id="project-types-field"] .error-message');
+          errorDiv.textContent = 'Please select at least one project type';
+          errorDiv.classList.remove('hidden');
+          isValid = false;
+        }
+      }
+
+      // Validate terms agreement
+      if (!formData.get('agreeTerms')) {
+        alert('Please agree to the Terms of Service and Privacy Policy');
+        isValid = false;
+      }
+
+      if (!isValid) {
+        return;
+      }
+
+      // Show loading state
+      const signupText = signupBtn.querySelector('.signup-text');
+      const loader = signupBtn.querySelector('[data-lucide="loader-2"]');
+      
+      signupBtn.disabled = true;
+      signupText.textContent = 'Creating Account...';
+      loader.classList.remove('hidden');
+
+      // Simulate API call
+      try {
+        await new Promise(resolve => setTimeout(resolve, 2000));
+        
+        // Show success modal
+        successModal.classList.remove('hidden');
+        
+        // Reset form
+        signupForm.reset();
+        selectedUserType = null;
+        userTypeCards.forEach(card => {
+          card.classList.remove('ring-2', 'ring-cyber-blue', 'ring-electric-purple');
+          card.classList.add('border-2');
+        });
+        freelancerFields.classList.add('hidden');
+        clientFields.classList.add('hidden');
+        
+      } catch (error) {
+        alert('Something went wrong. Please try again.');
+      } finally {
+        // Reset button state
+        signupBtn.disabled = false;
+        signupText.textContent = 'Create Account';
+        loader.classList.add('hidden');
+      }
+    });
+
+    // Success modal close
+    document.getElementById('close-modal').addEventListener('click', () => {
+      successModal.classList.add('hidden');
+      window.location.href = 'dashboard.html';
+    });
+
+    // Real-time validation
+    const inputs = document.querySelectorAll('input, select, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('blur', () => {
+        if (input.name && input.value.trim()) {
+          clearError(input.name);
+        }
+      });
+    });
+
+    // Password strength indicator
+    const passwordInput2 = document.getElementById('password');
+    passwordInput2.addEventListener('input', () => {
+      const password = passwordInput2.value;
+      const strengthDiv = passwordInput2.parentElement.parentElement.querySelector('.text-xs');
+      
+      if (password.length === 0) {
+        strengthDiv.textContent = 'At least 8 characters with numbers and symbols';
+        strengthDiv.className = 'text-xs text-gray-400 mt-1';
+      } else if (password.length < 8) {
+        strengthDiv.textContent = 'Too short - need at least 8 characters';
+        strengthDiv.className = 'text-xs text-red-400 mt-1';
+      } else if (!/\d/.test(password)) {
+        strengthDiv.textContent = 'Add at least one number';
+        strengthDiv.className = 'text-xs text-yellow-400 mt-1';
+      } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        strengthDiv.textContent = 'Add at least one symbol';
+        strengthDiv.className = 'text-xs text-yellow-400 mt-1';
+      } else {
+        strengthDiv.textContent = 'Strong password!';
+        strengthDiv.className = 'text-xs text-neon-green mt-1';
+      }
+    });
+  </script>
+
+  <!-- Schema.org structured data for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Sign Up - StudentFreelance Hub",
+    "description": "Join StudentFreelance Hub - Sign up as a student freelancer or client to start connecting with opportunities.",
+    "url": "https://studentfreelancehub.com/signup",
+    "mainEntity": {
+      "@type": "WebApplication",
+      "name": "StudentFreelance Hub",
+      "applicationCategory": "BusinessApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+  }
+  </script>
+</body>
+</html>

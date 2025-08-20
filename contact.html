@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact StudentFreelance Hub - Get Support & Connect with Us</title>
+  <meta name="description" content="Contact StudentFreelance Hub for support, partnerships, or questions. Multiple ways to reach our team and get the help you need.">
+  <meta name="keywords" content="contact student freelance platform, customer support, freelance help, platform assistance">
+  
+  <!-- Schema markup for contact page -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "StudentFreelance Hub",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-0123",
+        "contactType": "customer service",
+        "availableLanguage": "English"
+      }
+    }
+  }
+  </script>
+  
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'cyber-blue': '#00D4FF',
+            'electric-purple': '#8B5CF6',
+            'neon-green': '#10B981',
+            'dark-slate': '#0F172A',
+            'tech-gray': '#1E293B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-slate text-white font-sofia">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-cyber-blue/10 via-electric-purple/10 to-neon-green/10" data-id="contact-hero">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="contact-title">
+          Get in Touch
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-id="contact-subtitle">
+          Have questions, need support, or want to partner with us? We're here to help and would love to hear from you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form & Info -->
+  <section class="py-16" data-id="contact-main">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <!-- Contact Form -->
+        <div class="bg-tech-gray/30 border border-cyber-blue/20 rounded-xl p-8" data-id="contact-form-container">
+          <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="form-title">
+            Send us a Message
+          </h2>
+          <form class="space-y-6" data-id="contact-form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2" data-id="first-name-label">First Name</label>
+                <input type="text" id="firstName" name="firstName" required class="w-full bg-dark-slate border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" placeholder="John" data-id="first-name-input">
+              </div>
+              <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2" data-id="last-name-label">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required class="w-full bg-dark-slate border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" placeholder="Doe" data-id="last-name-input">
+              </div>
+            </div>
+            
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2" data-id="email-label">Email Address</label>
+              <input type="email" id="email" name="email" required class="w-full bg-dark-slate border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" placeholder="john@example.com" data-id="email-input">
+            </div>
+            
+            <div>
+              <label for="subject" class="block text-sm font-medium text-gray-300 mb-2" data-id="subject-label">Subject</label>
+              <select id="subject" name="subject" required class="w-full bg-dark-slate border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" data-id="subject-select">
+                <option value="">Select a subject</option>
+                <option value="general">General Inquiry</option>
+                <option value="support">Technical Support</option>
+                <option value="billing">Billing & Payments</option>
+                <option value="partnership">Partnership Opportunities</option>
+                <option value="feedback">Feedback & Suggestions</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-300 mb-2" data-id="message-label">Message</label>
+              <textarea id="message" name="message" rows="5" required class="w-full bg-dark-slate border border-gray-600 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors resize-none" placeholder="Tell us how we can help you..." data-id="message-textarea"></textarea>
+            </div>
+            
+            <button type="submit" class="w-full bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300" data-id="submit-button">
+              Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div class="space-y-8" data-id="contact-info">
+          <div>
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-electric-purple to-neon-green bg-clip-text text-transparent" data-id="info-title">
+              Contact Information
+            </h2>
+            <p class="text-gray-300 text-lg mb-8" data-id="info-description">
+              We're always here to help. Choose the best way to reach us based on your needs.
+            </p>
+          </div>
+
+          <!-- Contact Methods -->
+          <div class="space-y-6">
+            <div class="flex items-start space-x-4 p-6 bg-tech-gray/30 border border-cyber-blue/20 rounded-xl hover:border-cyber-blue/40 transition-colors" data-id="contact-email">
+              <div class="w-12 h-12 bg-cyber-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="mail" class="w-6 h-6 text-cyber-blue"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2 text-cyber-blue">Email Support</h3>
+                <p class="text-gray-300 mb-2">For general inquiries and support</p>
+                <a href="mailto:support@studentfreelancehub.com" class="text-cyber-blue hover:text-electric-purple transition-colors">support@studentfreelancehub.com</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-6 bg-tech-gray/30 border border-electric-purple/20 rounded-xl hover:border-electric-purple/40 transition-colors" data-id="contact-phone">
+              <div class="w-12 h-12 bg-electric-purple/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-6 h-6 text-electric-purple"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2 text-electric-purple">Phone Support</h3>
+                <p class="text-gray-300 mb-2">Monday - Friday, 9AM - 6PM EST</p>
+                <a href="tel:+15550123" class="text-electric-purple hover:text-neon-green transition-colors">+1 (555) 012-3456</a>
+              </div>
+            </div>
+
+            <div class="flex items-start space-x-4 p-6 bg-tech-gray/30 border border-neon-green/20 rounded-xl hover:border-neon-green/40 transition-colors" data-id="contact-chat">
+              <div class="w-12 h-12 bg-neon-green/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <i data-lucide="message-circle" class="w-6 h-6 text-neon-green"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold mb-2 text-neon-green">Live Chat</h3>
+                <p class="text-gray-300 mb-2">Available 24/7 for instant support</p>
+                <button class="text-neon-green hover:text-cyber-blue transition-colors">Start Chat</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="pt-8 border-t border-gray-700" data-id="social-media">
+            <h3 class="text-xl font-semibold mb-4 text-gray-300">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="w-12 h-12 bg-cyber-blue/10 rounded-full flex items-center justify-center hover:bg-cyber-blue/20 transition-colors group" data-id="social-twitter">
+                <i data-lucide="twitter" class="w-6 h-6 text-cyber-blue group-hover:text-white transition-colors"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-electric-purple/10 rounded-full flex items-center justify-center hover:bg-electric-purple/20 transition-colors group" data-id="social-linkedin">
+                <i data-lucide="linkedin" class="w-6 h-6 text-electric-purple group-hover:text-white transition-colors"></i>
+              </a>
+              <a href="#" class="w-12 h-12 bg-neon-green/10 rounded-full flex items-center justify-center hover:bg-neon-green/20 transition-colors group" data-id="social-github">
+                <i data-lucide="github" class="w-6 h-6 text-neon-green group-hover:text-white transition-colors"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-tech-gray/30" data-id="faq-section">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="faq-title">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-id="faq-subtitle">
+          Quick answers to common questions about our platform
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto space-y-6">
+        <div class="bg-dark-slate border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="faq-1">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFAQ(1)">
+            <h3 class="text-xl font-semibold text-white">How do I get started as a student freelancer?</h3>
+            <i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 transform transition-transform" id="faq-icon-1"></i>
+          </div>
+          <div class="mt-4 text-gray-300 hidden" id="faq-answer-1">
+            <p>Simply create your profile, showcase your skills and portfolio, set your rates, and start applying to relevant projects. Our verification process ensures you get access to quality opportunities.</p>
+          </div>
+        </div>
+
+        <div class="bg-dark-slate border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="faq-2">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFAQ(2)">
+            <h3 class="text-xl font-semibold text-white">What types of projects are available?</h3>
+            <i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 transform transition-transform" id="faq-icon-2"></i>
+          </div>
+          <div class="mt-4 text-gray-300 hidden" id="faq-answer-2">
+            <p>We offer projects across web development, mobile apps, graphic design, content writing, digital marketing, data analysis, and more. Projects range from short-term tasks to long-term collaborations.</p>
+          </div>
+        </div>
+
+        <div class="bg-dark-slate border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="faq-3">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFAQ(3)">
+            <h3 class="text-xl font-semibold text-white">How does payment work?</h3>
+            <i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 transform transition-transform" id="faq-icon-3"></i>
+          </div>
+          <div class="mt-4 text-gray-300 hidden" id="faq-answer-3">
+            <p>We use secure escrow payments. Clients fund projects upfront, and payments are released to freelancers upon milestone completion or project delivery. We support multiple payment methods.</p>
+          </div>
+        </div>
+
+        <div class="bg-dark-slate border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="faq-4">
+          <div class="flex items-center justify-between cursor-pointer" onclick="toggleFAQ(4)">
+            <h3 class="text-xl font-semibold text-white">Is there a fee for using the platform?</h3>
+            <i data-lucide="chevron-down" class="w-6 h-6 text-gray-400 transform transition-transform" id="faq-icon-4"></i>
+          </div>
+          <div class="mt-4 text-gray-300 hidden" id="faq-answer-4">
+            <p>Creating a profile is free. We charge a small service fee (10%) on completed projects, which covers platform maintenance, payment processing, and support services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+
+    // Contact form handling
+    const contactForm = document.querySelector('[data-id="contact-form"]');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show success message
+      const submitButton = document.querySelector('[data-id="submit-button"]');
+      const originalText = submitButton.textContent;
+      submitButton.textContent = 'Message Sent!';
+      submitButton.classList.add('bg-neon-green');
+      
+      // Reset form and button after 3 seconds
+      setTimeout(() => {
+        contactForm.reset();
+        submitButton.textContent = originalText;
+        submitButton.classList.remove('bg-neon-green');
+      }, 3000);
+    });
+  </script>
+
+  <script>
+    // FAQ Toggle Function
+    function toggleFAQ(index) {
+      const answer = document.getElementById(`faq-answer-${index}`);
+      const icon = document.getElementById(`faq-icon-${index}`);
+      
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        answer.classList.add('hidden');
+        icon.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+</body>
+</html>

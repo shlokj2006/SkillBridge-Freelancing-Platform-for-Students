@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StudentFreelance Hub - Connect with Top Student Freelancers for Digital Services</title>
+  <meta name="description" content="Connect with talented student freelancers for web development, design, writing, marketing and more. Professional digital services at student-friendly rates.">
+  <meta name="keywords" content="student freelancer platform, hire student freelancers, digital services, web development students, freelance marketplace">
+  <meta property="og:title" content="StudentFreelance Hub - Connect with Top Student Freelancers">
+  <meta property="og:description" content="Professional digital services by talented student freelancers. Web development, design, writing, marketing and more.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "StudentFreelance Hub",
+    "description": "Platform connecting clients with talented student freelancers",
+    "url": "https://studentfreelance.hub"
+  }
+  </script>
+  
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'cyber-blue': '#00D4FF',
+            'electric-purple': '#8B5CF6',
+            'neon-green': '#10B981',
+            'dark-slate': '#0F172A',
+            'tech-gray': '#1E293B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-slate text-white font-sofia">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden" data-id="hero-section">
+    <div class="absolute inset-0 bg-gradient-to-br from-cyber-blue/10 via-electric-purple/10 to-neon-green/10"></div>
+    <div class="absolute inset-0">
+      <div class="absolute top-20 left-10 w-32 h-32 bg-cyber-blue/20 rounded-full blur-xl animate-pulse"></div>
+      <div class="absolute bottom-20 right-10 w-40 h-40 bg-electric-purple/20 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-neon-green/10 rounded-full blur-2xl animate-pulse delay-500"></div>
+    </div>
+    
+    <div class="container mx-auto px-4 text-center relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-cyber-blue via-electric-purple to-neon-green bg-clip-text text-transparent leading-tight" data-id="hero-title">
+          Connect with Top Student Freelancers
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed" data-id="hero-subtitle">
+          Professional digital services by talented students. Web development, design, writing, marketing and more at competitive rates.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <a href="freelancers.html" class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300" data-id="browse-freelancers-btn">
+            Browse Freelancers
+          </a>
+          <a href="post-job.html" class="border-2 border-cyber-blue text-cyber-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-cyber-blue hover:text-dark-slate transform hover:scale-105 transition-all duration-300" data-id="post-job-btn">
+            Post a Project
+          </a>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div class="bg-tech-gray/50 backdrop-blur-sm rounded-lg p-4 border border-cyber-blue/20" data-id="stat-freelancers">
+            <div class="text-2xl md:text-3xl font-bold text-cyber-blue mb-1">500+</div>
+            <div class="text-gray-400 text-sm">Active Freelancers</div>
+          </div>
+          <div class="bg-tech-gray/50 backdrop-blur-sm rounded-lg p-4 border border-electric-purple/20" data-id="stat-projects">
+            <div class="text-2xl md:text-3xl font-bold text-electric-purple mb-1">1,200+</div>
+            <div class="text-gray-400 text-sm">Projects Completed</div>
+          </div>
+          <div class="bg-tech-gray/50 backdrop-blur-sm rounded-lg p-4 border border-neon-green/20" data-id="stat-satisfaction">
+            <div class="text-2xl md:text-3xl font-bold text-neon-green mb-1">98%</div>
+            <div class="text-gray-400 text-sm">Satisfaction Rate</div>
+          </div>
+          <div class="bg-tech-gray/50 backdrop-blur-sm rounded-lg p-4 border border-cyber-blue/20" data-id="stat-universities">
+            <div class="text-2xl md:text-3xl font-bold text-cyber-blue mb-1">50+</div>
+            <div class="text-gray-400 text-sm">Universities</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-20 bg-tech-gray/30" data-id="features-section">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="features-title">
+          Why Choose Our Platform?
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-id="features-subtitle">
+          Connecting talented students with exciting opportunities while ensuring quality, security, and fair compensation.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-dark-slate border border-cyber-blue/20 rounded-xl p-8 hover:border-cyber-blue/40 transform hover:scale-105 transition-all duration-300" data-id="feature-verified">
+          <div class="w-16 h-16 bg-cyber-blue/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="shield-check" class="w-8 h-8 text-cyber-blue"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-cyber-blue">Verified Talent</h3>
+          <p class="text-gray-300 leading-relaxed">All freelancers are verified students with proven academic credentials and portfolio reviews.</p>
+        </div>
+
+        <div class="bg-dark-slate border border-electric-purple/20 rounded-xl p-8 hover:border-electric-purple/40 transform hover:scale-105 transition-all duration-300" data-id="feature-secure">
+          <div class="w-16 h-16 bg-electric-purple/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="lock" class="w-8 h-8 text-electric-purple"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-electric-purple">Secure Payments</h3>
+          <p class="text-gray-300 leading-relaxed">Escrow-protected payments ensure both clients and freelancers are protected throughout the project.</p>
+        </div>
+
+        <div class="bg-dark-slate border border-neon-green/20 rounded-xl p-8 hover:border-neon-green/40 transform hover:scale-105 transition-all duration-300" data-id="feature-support">
+          <div class="w-16 h-16 bg-neon-green/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="headphones" class="w-8 h-8 text-neon-green"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-neon-green">24/7 Support</h3>
+          <p class="text-gray-300 leading-relaxed">Round-the-clock customer support to help resolve any issues and ensure project success.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Categories Preview -->
+  <section class="py-20" data-id="categories-section">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-electric-purple to-neon-green bg-clip-text text-transparent" data-id="categories-title">
+          Popular Service Categories
+        </h2>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-id="categories-subtitle">
+          Discover talented student freelancers across diverse digital service categories.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="categories.html#web-development" class="group bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-web-dev">
+          <div class="w-12 h-12 bg-cyber-blue/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyber-blue/20 transition-colors">
+            <i data-lucide="code" class="w-6 h-6 text-cyber-blue"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-cyber-blue transition-colors">Web Development</h3>
+          <p class="text-gray-400 text-sm mb-3">Modern websites, web apps, and more</p>
+          <div class="text-cyber-blue text-sm font-semibold">150+ freelancers</div>
+        </a>
+
+        <a href="categories.html#design" class="group bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-electric-purple/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-design">
+          <div class="w-12 h-12 bg-electric-purple/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-electric-purple/20 transition-colors">
+            <i data-lucide="palette" class="w-6 h-6 text-electric-purple"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-electric-purple transition-colors">Design & Creative</h3>
+          <p class="text-gray-400 text-sm mb-3">UI/UX, graphics, branding</p>
+          <div class="text-electric-purple text-sm font-semibold">120+ freelancers</div>
+        </a>
+
+        <a href="categories.html#writing" class="group bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-neon-green/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-writing">
+          <div class="w-12 h-12 bg-neon-green/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-neon-green/20 transition-colors">
+            <i data-lucide="pen-tool" class="w-6 h-6 text-neon-green"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-neon-green transition-colors">Content & Writing</h3>
+          <p class="text-gray-400 text-sm mb-3">Articles, copywriting, technical docs</p>
+          <div class="text-neon-green text-sm font-semibold">80+ freelancers</div>
+        </a>
+
+        <a href="categories.html#marketing" class="group bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-marketing">
+          <div class="w-12 h-12 bg-cyber-blue/10 rounded-lg flex items-center justify-center mb-4 group-hover:bg-cyber-blue/20 transition-colors">
+            <i data-lucide="trending-up" class="w-6 h-6 text-cyber-blue"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-2 group-hover:text-cyber-blue transition-colors">Digital Marketing</h3>
+          <p class="text-gray-400 text-sm mb-3">SEO, social media, advertising</p>
+          <div class="text-cyber-blue text-sm font-semibold">60+ freelancers</div>
+        </a>
+      </div>
+
+      <div class="text-center mt-12">
+        <a href="categories.html" class="inline-flex items-center bg-gradient-to-r from-electric-purple to-neon-green text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-electric-purple/25 transform hover:scale-105 transition-all duration-300" data-id="view-all-categories-btn">
+          View All Categories
+          <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-gradient-to-r from-cyber-blue/10 via-electric-purple/10 to-neon-green/10" data-id="cta-section">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="cta-title">
+        Ready to Get Started?
+      </h2>
+      <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" data-id="cta-subtitle">
+        Join thousands of students and clients who trust our platform for their digital service needs.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+        <a href="signup.html?type=freelancer" class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300" data-id="join-freelancer-btn">
+          Join as Freelancer
+        </a>
+        <a href="signup.html?type=client" class="border-2 border-cyber-blue text-cyber-blue px-8 py-4 rounded-full font-semibold text-lg hover:bg-cyber-blue hover:text-dark-slate transform hover:scale-105 transition-all duration-300" data-id="join-client-btn">
+          Hire Talent
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  
+
+
+  <!-- Scripts -->
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    await loadComponent('#navbar-container');
+    await loadComponent('#footer-container');
+    await loadComponent('#badge-container');
+    
+    // Initialize icons after components are loaded
+    lucide.createIcons();
+    
+    // Add smooth scroll behavior
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

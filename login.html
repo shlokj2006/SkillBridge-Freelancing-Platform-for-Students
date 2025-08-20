@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - StudentFreelance Hub</title>
+  <meta name="description" content="Login to your StudentFreelance Hub account and access opportunities for student freelancers and clients.">
+  
+  <!-- External Resources -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-gray-900 text-white font-sofia">
+  <!-- Navbar Container -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Main Content -->
+  <main class="pt-20 min-h-screen">
+    <!-- Login Section -->
+    <section class="py-20 px-4">
+      <div class="max-w-md mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-8" data-id="login-header">
+          <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" data-id="login-title">
+            Welcome Back
+          </h1>
+          <p class="text-gray-400 text-lg" data-id="login-subtitle">
+            Sign in to your StudentFreelance Hub account
+          </p>
+        </div>
+
+        <!-- Login Form -->
+        <div class="bg-gray-800/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8 shadow-2xl" data-id="login-form-container">
+          <form id="loginForm" class="space-y-6" data-id="login-form">
+            <!-- Email Field -->
+            <div data-id="email-field">
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-2" data-id="email-label">
+                Email Address
+              </label>
+              <div class="relative">
+                <i data-lucide="mail" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                <input 
+                  type="email" 
+                  id="email" 
+                  name="email"
+                  required
+                  class="w-full pl-11 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
+                  placeholder="Enter your email"
+                  data-id="email-input"
+                >
+              </div>
+              <span class="text-red-400 text-sm mt-1 hidden" id="emailError" data-id="email-error"></span>
+            </div>
+
+            <!-- Password Field -->
+            <div data-id="password-field">
+              <label for="password" class="block text-sm font-medium text-gray-300 mb-2" data-id="password-label">
+                Password
+              </label>
+              <div class="relative">
+                <i data-lucide="lock" class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5"></i>
+                <input 
+                  type="password" 
+                  id="password" 
+                  name="password"
+                  required
+                  class="w-full pl-11 pr-12 py-3 bg-gray-700/50 border border-gray-600 rounded-lg focus:ring-2 focus:ring-cyan-400 focus:border-transparent text-white placeholder-gray-400 transition-all duration-200"
+                  placeholder="Enter your password"
+                  data-id="password-input"
+                >
+                <button 
+                  type="button" 
+                  id="togglePassword"
+                  class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white transition-colors"
+                  data-id="password-toggle"
+                >
+                  <i data-lucide="eye" class="w-5 h-5"></i>
+                </button>
+              </div>
+              <span class="text-red-400 text-sm mt-1 hidden" id="passwordError" data-id="password-error"></span>
+            </div>
+
+            <!-- Remember Me & Forgot Password -->
+            <div class="flex items-center justify-between" data-id="login-options">
+              <label class="flex items-center" data-id="remember-me">
+                <input 
+                  type="checkbox" 
+                  id="remember"
+                  class="w-4 h-4 text-cyan-400 bg-gray-700 border-gray-600 rounded focus:ring-cyan-400 focus:ring-2"
+                  data-id="remember-checkbox"
+                >
+                <span class="ml-2 text-sm text-gray-300">Remember me</span>
+              </label>
+              <a href="#" class="text-sm text-cyan-400 hover:text-cyan-300 transition-colors" data-id="forgot-password-link">
+                Forgot password?
+              </a>
+            </div>
+
+            <!-- Submit Button -->
+            <button 
+              type="submit"
+              class="w-full bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-gray-900"
+              data-id="login-submit"
+            >
+              <span class="flex items-center justify-center">
+                <span id="loginButtonText">Sign In</span>
+                <i data-lucide="loader" class="ml-2 w-5 h-5 animate-spin hidden" id="loginSpinner"></i>
+              </span>
+            </button>
+
+            <!-- Error Message -->
+            <div id="loginError" class="text-red-400 text-sm text-center hidden" data-id="login-error"></div>
+          </form>
+
+          <!-- Divider -->
+          <div class="flex items-center my-6" data-id="divider">
+            <div class="flex-1 border-t border-gray-600"></div>
+            <span class="px-4 text-gray-400 text-sm">or</span>
+            <div class="flex-1 border-t border-gray-600"></div>
+          </div>
+
+          <!-- Social Login -->
+          <div class="space-y-3" data-id="social-login">
+            <button class="w-full bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center" data-id="google-login">
+              <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24">
+                <path fill="currentColor" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                <path fill="currentColor" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                <path fill="currentColor" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                <path fill="currentColor" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+              </svg>
+              Continue with Google
+            </button>
+            <button class="w-full bg-gray-700 hover:bg-gray-600 text-white font-medium py-3 px-4 rounded-lg transition-all duration-200 flex items-center justify-center" data-id="github-login">
+              <i data-lucide="github" class="w-5 h-5 mr-2"></i>
+              Continue with GitHub
+            </button>
+          </div>
+
+          <!-- Sign Up Link -->
+          <div class="text-center mt-6" data-id="signup-link-container">
+            <p class="text-gray-400" data-id="signup-text">
+              Don't have an account? 
+              <a href="signup.html" class="text-cyan-400 hover:text-cyan-300 font-medium transition-colors" data-id="signup-link">
+                Sign up here
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Container -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge Container -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <!-- Scripts -->
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    import { validateEmail } from './scripts/utils/helpers.js';
+    
+    // Load components
+    await Promise.all([
+      loadComponent('#navbar-container'),
+      loadComponent('#footer-container') 
+     
+    ]);
+    
+    // Initialize icons
+    lucide.createIcons();
+    
+    // Login form functionality
+    const loginForm = document.getElementById('loginForm');
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+    const togglePassword = document.getElementById('togglePassword');
+    const loginButton = document.querySelector('[data-id="login-submit"]');
+    const loginButtonText = document.getElementById('loginButtonText');
+    const loginSpinner = document.getElementById('loginSpinner');
+    const loginError = document.getElementById('loginError');
+    
+    // Password visibility toggle
+    togglePassword.addEventListener('click', () => {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      
+      const icon = togglePassword.querySelector('i');
+      icon.setAttribute('data-lucide', type === 'password' ? 'eye' : 'eye-off');
+      lucide.createIcons();
+    });
+    
+    // Form validation
+    function validateForm() {
+      let isValid = true;
+      
+      // Email validation
+      const emailError = document.getElementById('emailError');
+      if (!emailInput.value) {
+        emailError.textContent = 'Email is required';
+        emailError.classList.remove('hidden');
+        isValid = false;
+      } else if (!validateEmail(emailInput.value)) {
+        emailError.textContent = 'Please enter a valid email';
+        emailError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        emailError.classList.add('hidden');
+      }
+      
+      // Password validation
+      const passwordError = document.getElementById('passwordError');
+      if (!passwordInput.value) {
+        passwordError.textContent = 'Password is required';
+        passwordError.classList.remove('hidden');
+        isValid = false;
+      } else if (passwordInput.value.length < 6) {
+        passwordError.textContent = 'Password must be at least 6 characters';
+        passwordError.classList.remove('hidden');
+        isValid = false;
+      } else {
+        passwordError.classList.add('hidden');
+      }
+      
+      return isValid;
+    }
+    
+    // Form submission
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      if (!validateForm()) return;
+      
+      // Show loading state
+      loginButtonText.textContent = 'Signing in...';
+      loginSpinner.classList.remove('hidden');
+      loginButton.disabled = true;
+      loginError.classList.add('hidden');
+      
+      try {
+        // Simulate API call
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        // For demo purposes, always succeed
+        // In real app, this would be an actual API call
+        
+        // Store login state
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('userEmail', emailInput.value);
+        
+        // Success feedback
+        loginButtonText.textContent = 'Success!';
+        
+        // Redirect after short delay
+        setTimeout(() => {
+          window.location.href = 'dashboard.html';
+        }, 1000);
+        
+      } catch (error) {
+        // Show error
+        loginError.textContent = 'Invalid credentials. Please try again.';
+        loginError.classList.remove('hidden');
+        
+        // Reset button
+        loginButtonText.textContent = 'Sign In';
+        loginSpinner.classList.add('hidden');
+        loginButton.disabled = false;
+      }
+    });
+    
+    // Social login handlers
+    document.querySelector('[data-id="google-login"]').addEventListener('click', () => {
+      alert('Google login integration would go here');
+    });
+    
+    document.querySelector('[data-id="github-login"]').addEventListener('click', () => {
+      alert('GitHub login integration would go here');
+    });
+    
+    // Real-time validation
+    emailInput.addEventListener('blur', validateForm);
+    passwordInput.addEventListener('blur', validateForm);
+  </script>
+</body>
+</html>

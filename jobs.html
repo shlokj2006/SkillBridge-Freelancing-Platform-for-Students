@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browse Jobs - Find Perfect Projects on StudentFreelance Hub</title>
+  <meta name="description" content="Discover exciting freelance opportunities for students. Browse web development, design, writing, and marketing projects from verified clients.">
+  <meta name="keywords" content="student freelance jobs, remote work for students, part-time projects, freelance opportunities">
+  
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'cyber-blue': '#00D4FF',
+            'electric-purple': '#8B5CF6',
+            'neon-green': '#10B981',
+            'dark-slate': '#0F172A',
+            'tech-gray': '#1E293B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-slate text-white font-sofia">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Hero Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-cyber-blue/10 via-electric-purple/10 to-neon-green/10" data-id="jobs-hero">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="jobs-title">
+          Find Your Next Project
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8" data-id="jobs-subtitle">
+          Discover exciting freelance opportunities tailored for students. From quick tasks to long-term projects, find work that fits your schedule and skills.
+        </p>
+        
+        <!-- Search Bar -->
+        <div class="max-w-4xl mx-auto" data-id="job-search">
+          <div class="flex flex-col md:flex-row gap-4">
+            <div class="flex-1">
+              <input type="text" placeholder="Search jobs by keyword, skill, or client..." class="w-full bg-tech-gray border border-gray-600 rounded-full px-6 py-4 text-white placeholder-gray-400 focus:border-cyber-blue focus:ring-1 focus:ring-cyber-blue transition-colors" data-id="search-input">
+            </div>
+            <button class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300" data-id="search-btn">
+              <i data-lucide="search" class="w-5 h-5 inline-block mr-2"></i>
+              Search Jobs
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters & Sort -->
+  <section class="py-8 bg-tech-gray/30" data-id="filters-section">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-wrap items-center justify-between gap-4">
+        <div class="flex flex-wrap items-center gap-4">
+          <select class="bg-dark-slate border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyber-blue" data-id="category-filter">
+            <option value="">All Categories</option>
+            <option value="web-dev">Web Development</option>
+            <option value="mobile-dev">Mobile Development</option>
+            <option value="design">Graphic Design</option>
+            <option value="writing">Content Writing</option>
+            <option value="marketing">Digital Marketing</option>
+            <option value="data">Data Analysis</option>
+          </select>
+          
+          <select class="bg-dark-slate border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyber-blue" data-id="budget-filter">
+            <option value="">Any Budget</option>
+            <option value="0-500">$0 - $500</option>
+            <option value="500-1000">$500 - $1,000</option>
+            <option value="1000-2500">$1,000 - $2,500</option>
+            <option value="2500+">$2,500+</option>
+          </select>
+          
+          <select class="bg-dark-slate border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyber-blue" data-id="duration-filter">
+            <option value="">Any Duration</option>
+            <option value="short">Less than 1 week</option>
+            <option value="medium">1-4 weeks</option>
+            <option value="long">1-3 months</option>
+            <option value="ongoing">3+ months</option>
+          </select>
+        </div>
+        
+        <div class="flex items-center gap-4">
+          <select class="bg-dark-slate border border-gray-600 rounded-lg px-4 py-2 text-white focus:border-cyber-blue" data-id="sort-filter">
+            <option value="newest">Newest First</option>
+            <option value="budget-high">Highest Budget</option>
+            <option value="budget-low">Lowest Budget</option>
+            <option value="deadline">Deadline Soon</option>
+          </select>
+          
+          <span class="text-gray-400 text-sm" data-id="results-count">Showing 24 of 156 jobs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Job Listings -->
+  <section class="py-16" data-id="job-listings">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 gap-6">
+        
+        <!-- Featured Job -->
+        <div class="bg-gradient-to-r from-cyber-blue/5 to-electric-purple/5 border-2 border-cyber-blue/30 rounded-xl p-6 relative overflow-hidden" data-id="featured-job">
+          <div class="absolute top-4 right-4 bg-cyber-blue text-dark-slate px-3 py-1 rounded-full text-sm font-semibold">
+            Featured
+          </div>
+          <div class="flex flex-col lg:flex-row justify-between items-start gap-6">
+            <div class="flex-1">
+              <div class="flex items-start gap-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=60&h=60&fit=crop" alt="TechStart Inc." class="w-15 h-15 rounded-lg">
+                <div>
+                  <h3 class="text-2xl font-bold text-white mb-2">Senior Frontend Developer for SaaS Platform</h3>
+                  <p class="text-cyber-blue font-semibold mb-1">TechStart Inc.</p>
+                  <div class="flex items-center text-gray-400 text-sm">
+                    <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+                    Remote
+                    <span class="mx-2">•</span>
+                    <i data-lucide="clock" class="w-4 h-4 mr-1"></i>
+                    Posted 2 hours ago
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                We're looking for a talented frontend developer to help build the next generation of our SaaS platform. You'll work with React, TypeScript, and modern CSS frameworks to create beautiful, responsive user interfaces.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">React</span>
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">TypeScript</span>
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">Tailwind CSS</span>
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">Node.js</span>
+              </div>
+              <div class="flex items-center gap-6 text-sm text-gray-400">
+                <div class="flex items-center">
+                  <i data-lucide="calendar" class="w-4 h-4 mr-1"></i>
+                  Deadline: Jan 15, 2025
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="users" class="w-4 h-4 mr-1"></i>
+                  3-5 freelancers needed
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="star" class="w-4 h-4 mr-1"></i>
+                  4.9 client rating
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-3xl font-bold text-cyber-blue mb-2">$2,500</div>
+              <p class="text-gray-400 text-sm mb-4">Fixed Price</p>
+              <button class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regular Job Listings -->
+        <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="job-1">
+          <div class="flex flex-col lg:flex-row justify-between items-start gap-6">
+            <div class="flex-1">
+              <div class="flex items-start gap-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=50&h=50&fit=crop" alt="Creative Agency" class="w-12 h-12 rounded-lg">
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Mobile App UI/UX Design</h3>
+                  <p class="text-electric-purple font-semibold mb-1">Creative Agency Pro</p>
+                  <div class="flex items-center text-gray-400 text-sm">
+                    <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+                    Remote
+                    <span class="mx-2">•</span>
+                    <i data-lucide="clock" class="w-4 h-4 mr-1"></i>
+                    Posted 4 hours ago
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                Design a modern, intuitive mobile app interface for a fitness tracking application. Looking for clean, minimalist design that follows iOS and Android guidelines.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-electric-purple/20 text-electric-purple px-3 py-1 rounded-full text-sm">UI Design</span>
+                <span class="bg-electric-purple/20 text-electric-purple px-3 py-1 rounded-full text-sm">UX Design</span>
+                <span class="bg-electric-purple/20 text-electric-purple px-3 py-1 rounded-full text-sm">Figma</span>
+                <span class="bg-electric-purple/20 text-electric-purple px-3 py-1 rounded-full text-sm">Mobile Design</span>
+              </div>
+              <div class="flex items-center gap-6 text-sm text-gray-400">
+                <div class="flex items-center">
+                  <i data-lucide="calendar" class="w-4 h-4 mr-1"></i>
+                  Deadline: Dec 20, 2024
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="star" class="w-4 h-4 mr-1"></i>
+                  4.8 client rating
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-bold text-electric-purple mb-2">$800</div>
+              <p class="text-gray-400 text-sm mb-4">Fixed Price</p>
+              <button class="bg-gradient-to-r from-electric-purple to-neon-green text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-electric-purple/25 transform hover:scale-105 transition-all duration-300">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- More job listings -->
+        <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="job-2">
+          <div class="flex flex-col lg:flex-row justify-between items-start gap-6">
+            <div class="flex-1">
+              <div class="flex items-start gap-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?w=50&h=50&fit=crop" alt="Content Hub" class="w-12 h-12 rounded-lg">
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Technical Content Writer</h3>
+                  <p class="text-neon-green font-semibold mb-1">Content Hub Solutions</p>
+                  <div class="flex items-center text-gray-400 text-sm">
+                    <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+                    Remote
+                    <span class="mx-2">•</span>
+                    <i data-lucide="clock" class="w-4 h-4 mr-1"></i>
+                    Posted 6 hours ago
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                Create engaging technical blog posts and documentation for developer tools. Need someone who can explain complex concepts in simple terms.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-neon-green/20 text-neon-green px-3 py-1 rounded-full text-sm">Technical Writing</span>
+                <span class="bg-neon-green/20 text-neon-green px-3 py-1 rounded-full text-sm">Documentation</span>
+                <span class="bg-neon-green/20 text-neon-green px-3 py-1 rounded-full text-sm">SEO</span>
+                <span class="bg-neon-green/20 text-neon-green px-3 py-1 rounded-full text-sm">Markdown</span>
+              </div>
+              <div class="flex items-center gap-6 text-sm text-gray-400">
+                <div class="flex items-center">
+                  <i data-lucide="calendar" class="w-4 h-4 mr-1"></i>
+                  Deadline: Jan 10, 2025
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="file-text" class="w-4 h-4 mr-1"></i>
+                  5 articles needed
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="star" class="w-4 h-4 mr-1"></i>
+                  4.7 client rating
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-bold text-neon-green mb-2">$600</div>
+              <p class="text-gray-400 text-sm mb-4">Fixed Price</p>
+              <button class="bg-gradient-to-r from-neon-green to-cyber-blue text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-neon-green/25 transform hover:scale-105 transition-all duration-300">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional job listings would continue here -->
+        <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="job-3">
+          <div class="flex flex-col lg:flex-row justify-between items-start gap-6">
+            <div class="flex-1">
+              <div class="flex items-start gap-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=50&h=50&fit=crop" alt="DataTech" class="w-12 h-12 rounded-lg">
+                <div>
+                  <h3 class="text-xl font-bold text-white mb-2">Data Analysis & Visualization</h3>
+                  <p class="text-cyber-blue font-semibold mb-1">DataTech Analytics</p>
+                  <div class="flex items-center text-gray-400 text-sm">
+                    <i data-lucide="map-pin" class="w-4 h-4 mr-1"></i>
+                    Remote
+                    <span class="mx-2">•</span>
+                    <i data-lucide="clock" class="w-4 h-4 mr-1"></i>
+                    Posted 8 hours ago
+                  </div>
+                </div>
+              </div>
+              <p class="text-gray-300 mb-4 leading-relaxed">
+                Analyze sales data and create interactive dashboards. Experience with Python, pandas, and visualization libraries required.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-4">
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">Python</span>
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">Pandas</span>
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">Tableau</span>
+                <span class="bg-cyber-blue/20 text-cyber-blue px-3 py-1 rounded-full text-sm">SQL</span>
+              </div>
+              <div class="flex items-center gap-6 text-sm text-gray-400">
+                <div class="flex items-center">
+                  <i data-lucide="calendar" class="w-4 h-4 mr-1"></i>
+                  Deadline: Dec 25, 2024
+                </div>
+                <div class="flex items-center">
+                  <i data-lucide="star" class="w-4 h-4 mr-1"></i>
+                  4.9 client rating
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-2xl font-bold text-cyber-blue mb-2">$1,200</div>
+              <p class="text-gray-400 text-sm mb-4">Fixed Price</p>
+              <button class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300">
+                Apply Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Load More -->
+      <div class="text-center mt-12" data-id="load-more">
+        <button class="bg-tech-gray border border-gray-600 text-white px-8 py-4 rounded-full font-semibold hover:border-cyber-blue hover:text-cyber-blue transition-colors">
+          Load More Jobs
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+    
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+
+    // Search and filter functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const searchBtn = document.querySelector('[data-id="search-btn"]');
+      const searchInput = document.querySelector('[data-id="search-input"]');
+      const filters = document.querySelectorAll('select[data-id$="-filter"]');
+      
+      // Search functionality
+      searchBtn.addEventListener('click', performSearch);
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          performSearch();
+        }
+      });
+      
+      // Filter change handlers
+      filters.forEach(filter => {
+        filter.addEventListener('change', performSearch);
+      });
+      
+      function performSearch() {
+        // In a real application, this would make API calls
+        console.log('Performing search with filters');
+        
+        // Visual feedback
+        searchBtn.disabled = true;
+        searchBtn.innerHTML = '<i data-lucide="loader" class="w-5 h-5 inline-block mr-2 animate-spin"></i>Searching...';
+        
+        setTimeout(() => {
+          searchBtn.disabled = false;
+          searchBtn.innerHTML = '<i data-lucide="search" class="w-5 h-5 inline-block mr-2"></i>Search Jobs';
+          lucide.createIcons();
+        }, 1500);
+      }
+      
+      // Apply button handlers
+      const applyButtons = document.querySelectorAll('button:contains("Apply Now")');
+      applyButtons.forEach(button => {
+        if (button.textContent.includes('Apply Now')) {
+          button.addEventListener('click', function() {
+            // Visual feedback for application
+            const originalText = this.textContent;
+            this.textContent = 'Applied!';
+            this.classList.add('bg-neon-green');
+            
+            setTimeout(() => {
+              this.textContent = originalText;
+              this.classList.remove('bg-neon-green');
+            }, 2000);
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard - StudentFreelance Hub</title>
+  <meta name="description" content="Manage your projects, profile, and earnings on StudentFreelance Hub. Complete dashboard for student freelancers and clients.">
+  <meta name="keywords" content="freelancer dashboard, project management, student freelance platform">
+  
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'cyber-blue': '#00D4FF',
+            'electric-purple': '#8B5CF6',
+            'neon-green': '#10B981',
+            'dark-slate': '#0F172A',
+            'tech-gray': '#1E293B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-slate text-white font-sofia">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Dashboard Header -->
+  <section class="pt-32 pb-8 bg-gradient-to-br from-cyber-blue/10 via-electric-purple/10 to-neon-green/10" data-id="dashboard-header">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center">
+        <div>
+          <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="welcome-title">
+            Welcome back, Alex!
+          </h1>
+          <p class="text-xl text-gray-300" data-id="welcome-subtitle">
+            Here's what's happening with your projects today
+          </p>
+        </div>
+        <div class="mt-4 lg:mt-0 flex space-x-4">
+          <button class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300" data-id="new-project-btn">
+            <i data-lucide="plus" class="w-5 h-5 inline-block mr-2"></i>
+            New Project
+          </button>
+          <button class="bg-tech-gray border border-gray-600 text-white px-6 py-3 rounded-full font-semibold hover:border-gray-500 transition-colors" data-id="view-profile-btn">
+            View Profile
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Stats -->
+  <section class="py-8" data-id="dashboard-stats">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+        <div class="bg-tech-gray/30 border border-cyber-blue/20 rounded-xl p-6 hover:border-cyber-blue/40 transition-colors" data-id="stat-projects">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-cyber-blue/10 rounded-full flex items-center justify-center">
+              <i data-lucide="briefcase" class="w-6 h-6 text-cyber-blue"></i>
+            </div>
+            <span class="text-2xl font-bold text-cyber-blue">12</span>
+          </div>
+          <h3 class="text-white font-semibold mb-1">Active Projects</h3>
+          <p class="text-gray-400 text-sm">+2 from last month</p>
+        </div>
+
+        <div class="bg-tech-gray/30 border border-electric-purple/20 rounded-xl p-6 hover:border-electric-purple/40 transition-colors" data-id="stat-earnings">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-electric-purple/10 rounded-full flex items-center justify-center">
+              <i data-lucide="dollar-sign" class="w-6 h-6 text-electric-purple"></i>
+            </div>
+            <span class="text-2xl font-bold text-electric-purple">$2,840</span>
+          </div>
+          <h3 class="text-white font-semibold mb-1">Total Earnings</h3>
+          <p class="text-gray-400 text-sm">This month</p>
+        </div>
+
+        <div class="bg-tech-gray/30 border border-neon-green/20 rounded-xl p-6 hover:border-neon-green/40 transition-colors" data-id="stat-rating">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-neon-green/10 rounded-full flex items-center justify-center">
+              <i data-lucide="star" class="w-6 h-6 text-neon-green"></i>
+            </div>
+            <span class="text-2xl font-bold text-neon-green">4.9</span>
+          </div>
+          <h3 class="text-white font-semibold mb-1">Average Rating</h3>
+          <p class="text-gray-400 text-sm">Based on 28 reviews</p>
+        </div>
+
+        <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6 hover:border-gray-500 transition-colors" data-id="stat-completed">
+          <div class="flex items-center justify-between mb-4">
+            <div class="w-12 h-12 bg-gray-600/10 rounded-full flex items-center justify-center">
+              <i data-lucide="check-circle" class="w-6 h-6 text-gray-400"></i>
+            </div>
+            <span class="text-2xl font-bold text-gray-400">45</span>
+          </div>
+          <h3 class="text-white font-semibold mb-1">Completed</h3>
+          <p class="text-gray-400 text-sm">All time projects</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard Main Content -->
+  <section class="py-8" data-id="dashboard-main">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        
+        <!-- Active Projects -->
+        <div class="lg:col-span-2">
+          <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6" data-id="active-projects">
+            <div class="flex items-center justify-between mb-6">
+              <h2 class="text-2xl font-bold text-white">Active Projects</h2>
+              <button class="text-cyber-blue hover:text-electric-purple transition-colors" data-id="view-all-projects">
+                View All
+              </button>
+            </div>
+
+            <div class="space-y-4">
+              <div class="bg-dark-slate border border-gray-700 rounded-lg p-5 hover:border-cyber-blue/40 transition-colors" data-id="project-1">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 class="text-lg font-semibold text-white mb-1">E-commerce Website Redesign</h3>
+                    <p class="text-gray-400 text-sm">Client: TechStart Inc.</p>
+                  </div>
+                  <span class="bg-neon-green/20 text-neon-green px-3 py-1 rounded-full text-xs font-medium">In Progress</span>
+                </div>
+                <div class="mb-3">
+                  <div class="flex justify-between text-sm text-gray-400 mb-1">
+                    <span>Progress</span>
+                    <span>75%</span>
+                  </div>
+                  <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-gradient-to-r from-cyber-blue to-electric-purple h-2 rounded-full" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-gray-400">Due: Dec 15, 2024</span>
+                  <span class="text-cyber-blue font-semibold">$1,200</span>
+                </div>
+              </div>
+
+              <div class="bg-dark-slate border border-gray-700 rounded-lg p-5 hover:border-cyber-blue/40 transition-colors" data-id="project-2">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 class="text-lg font-semibold text-white mb-1">Mobile App UI Design</h3>
+                    <p class="text-gray-400 text-sm">Client: FinanceApp Co.</p>
+                  </div>
+                  <span class="bg-electric-purple/20 text-electric-purple px-3 py-1 rounded-full text-xs font-medium">Review</span>
+                </div>
+                <div class="mb-3">
+                  <div class="flex justify-between text-sm text-gray-400 mb-1">
+                    <span>Progress</span>
+                    <span>90%</span>
+                  </div>
+                  <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-gradient-to-r from-electric-purple to-neon-green h-2 rounded-full" style="width: 90%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-gray-400">Due: Dec 10, 2024</span>
+                  <span class="text-electric-purple font-semibold">$800</span>
+                </div>
+              </div>
+
+              <div class="bg-dark-slate border border-gray-700 rounded-lg p-5 hover:border-cyber-blue/40 transition-colors" data-id="project-3">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h3 class="text-lg font-semibold text-white mb-1">Content Marketing Strategy</h3>
+                    <p class="text-gray-400 text-sm">Client: GrowthHub</p>
+                  </div>
+                  <span class="bg-yellow-500/20 text-yellow-500 px-3 py-1 rounded-full text-xs font-medium">Starting</span>
+                </div>
+                <div class="mb-3">
+                  <div class="flex justify-between text-sm text-gray-400 mb-1">
+                    <span>Progress</span>
+                    <span>20%</span>
+                  </div>
+                  <div class="w-full bg-gray-700 rounded-full h-2">
+                    <div class="bg-gradient-to-r from-yellow-500 to-neon-green h-2 rounded-full" style="width: 20%"></div>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                  <span class="text-gray-400">Due: Jan 5, 2025</span>
+                  <span class="text-neon-green font-semibold">$600</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+          <!-- Recent Messages -->
+          <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6" data-id="recent-messages">
+            <h3 class="text-xl font-bold text-white mb-4">Recent Messages</h3>
+            <div class="space-y-3">
+              <div class="flex items-start space-x-3 p-3 bg-dark-slate rounded-lg hover:bg-tech-gray/50 transition-colors cursor-pointer" data-id="message-1">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face" alt="Client" class="w-10 h-10 rounded-full">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-medium text-white">John Smith</p>
+                  <p class="text-xs text-gray-400 truncate">Great work on the homepage design...</p>
+                  <p class="text-xs text-gray-500">2 hours ago</p>
+                </div>
+              </div>
+              
+              <div class="flex items-start space-x-3 p-3 bg-dark-slate rounded-lg hover:bg-tech-gray/50 transition-colors cursor-pointer" data-id="message-2">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=40&h=40&fit=crop&crop=face" alt="Client" class="w-10 h-10 rounded-full">
+                <div class="flex-1 min-w-0">
+                  <p class="text-sm font-medium text-white">Sarah Johnson</p>
+                  <p class="text-xs text-gray-400 truncate">When can we schedule the review call?</p>
+                  <p class="text-xs text-gray-500">5 hours ago</p>
+                </div>
+              </div>
+            </div>
+            <button class="w-full mt-4 text-cyber-blue hover:text-electric-purple transition-colors text-sm font-medium" data-id="view-all-messages">
+              View All Messages
+            </button>
+          </div>
+
+          <!-- Quick Actions -->
+          <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6" data-id="quick-actions">
+            <h3 class="text-xl font-bold text-white mb-4">Quick Actions</h3>
+            <div class="space-y-3">
+              <button class="w-full bg-gradient-to-r from-cyber-blue/10 to-electric-purple/10 border border-cyber-blue/20 text-cyber-blue px-4 py-3 rounded-lg hover:border-cyber-blue/40 transition-colors text-left" data-id="action-update-profile">
+                <i data-lucide="user" class="w-5 h-5 inline-block mr-3"></i>
+                Update Profile
+              </button>
+              
+              <button class="w-full bg-gradient-to-r from-electric-purple/10 to-neon-green/10 border border-electric-purple/20 text-electric-purple px-4 py-3 rounded-lg hover:border-electric-purple/40 transition-colors text-left" data-id="action-browse-jobs">
+                <i data-lucide="search" class="w-5 h-5 inline-block mr-3"></i>
+                Browse New Jobs
+              </button>
+              
+              <button class="w-full bg-gradient-to-r from-neon-green/10 to-cyber-blue/10 border border-neon-green/20 text-neon-green px-4 py-3 rounded-lg hover:border-neon-green/40 transition-colors text-left" data-id="action-withdraw">
+                <i data-lucide="credit-card" class="w-5 h-5 inline-block mr-3"></i>
+                Withdraw Earnings
+              </button>
+            </div>
+          </div>
+
+          <!-- Performance Chart -->
+          <div class="bg-tech-gray/30 border border-gray-600 rounded-xl p-6" data-id="performance-chart">
+            <h3 class="text-xl font-bold text-white mb-4">Earnings This Month</h3>
+            <div class="space-y-3">
+              <div class="flex justify-between items-center">
+                <span class="text-gray-400">Week 1</span>
+                <span class="text-white font-semibold">$640</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-gradient-to-r from-cyber-blue to-electric-purple h-2 rounded-full" style="width: 45%"></div>
+              </div>
+              
+              <div class="flex justify-between items-center">
+                <span class="text-gray-400">Week 2</span>
+                <span class="text-white font-semibold">$890</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-gradient-to-r from-electric-purple to-neon-green h-2 rounded-full" style="width: 62%"></div>
+              </div>
+              
+              <div class="flex justify-between items-center">
+                <span class="text-gray-400">Week 3</span>
+                <span class="text-white font-semibold">$1,310</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-gradient-to-r from-neon-green to-cyber-blue h-2 rounded-full" style="width: 92%"></div>
+              </div>
+            </div>
+            <p class="text-center text-gray-400 text-sm mt-4">+23% from last month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    loadComponent('#navbar-container');
+    loadComponent('#footer-container');
+   
+    
+    // Initialize icons after components are loaded
+    setTimeout(() => {
+      lucide.createIcons();
+    }, 100);
+
+    // Dashboard interactivity
+    document.addEventListener('DOMContentLoaded', function() {
+      // Add click handlers for dashboard elements
+      const projectCards = document.querySelectorAll('[data-id^="project-"]');
+      projectCards.forEach(card => {
+        card.addEventListener('click', function() {
+          // Could navigate to project detail page
+          console.log('Navigate to project details');
+        });
+      });
+
+      // Message click handlers
+      const messages = document.querySelectorAll('[data-id^="message-"]');
+      messages.forEach(message => {
+        message.addEventListener('click', function() {
+          // Could open message thread
+          console.log('Open message thread');
+        });
+      });
+
+      // Quick action handlers
+      const quickActions = document.querySelectorAll('[data-id^="action-"]');
+      quickActions.forEach(action => {
+        action.addEventListener('click', function() {
+          const actionType = this.getAttribute('data-id').replace('action-', '');
+          console.log('Quick action:', actionType);
+          
+          // Add visual feedback
+          this.classList.add('transform', 'scale-95');
+          setTimeout(() => {
+            this.classList.remove('transform', 'scale-95');
+          }, 150);
+        });
+      });
+    });
+  </script>
+</body>
+</html>

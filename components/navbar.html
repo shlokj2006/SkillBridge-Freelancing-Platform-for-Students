@@ -1,0 +1,52 @@
+<nav class="fixed top-0 w-full bg-gray-900/95 backdrop-blur-sm border-b border-gray-800 z-50" data-id="main-navbar">
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-3" data-id="nav-logo">
+        <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-lg flex items-center justify-center">
+          <i data-lucide="zap" class="w-6 h-6 text-white"></i>
+        </div>
+        <span class="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">StudentFreelance</span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden md:flex items-center space-x-8" data-id="desktop-nav">
+        <a href="freelancers.html" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium" data-id="nav-freelancers">Find Freelancers</a>
+        <a href="categories.html" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium" data-id="nav-categories">Categories</a>
+        <a href="jobs.html" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium" data-id="nav-jobs">Browse Jobs</a>
+        <a href="about.html" class="text-gray-300 hover:text-cyan-400 transition-colors" data-id="nav-about">About</a>
+        <a href="contact.html" class="text-gray-300 hover:text-cyan-400 transition-colors" data-id="nav-contact">Contact</a>
+        <div class="flex items-center space-x-4" data-id="auth-buttons">
+          <a href="login.html" class="text-gray-300 hover:text-cyan-400 transition-colors" data-id="nav-login">Login</a>
+          <a href="signup.html" class="bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg transition-all duration-300 transform hover:scale-105" data-id="nav-signup">Sign Up</a>
+        </div>
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="hidden md:flex items-center space-x-4" data-id="nav-cta-buttons">
+        <a href="login.html" class="text-gray-300 hover:text-white transition-colors font-medium" data-id="nav-login">Login</a>
+        <a href="signup.html" class="bg-gradient-to-r from-cyan-400 to-purple-500 text-white px-6 py-2 rounded-full font-semibold hover:shadow-lg hover:shadow-cyan-400/25 transform hover:scale-105 transition-all duration-300" data-id="nav-signup">Sign Up</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-300 hover:text-white transition-colors" data-id="mobile-menu-toggle">
+        <i data-lucide="menu" class="w-6 h-6"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation -->
+    <div class="md:hidden hidden py-4 border-t border-gray-800" data-id="mobile-nav">
+      <div class="flex flex-col space-y-4">
+        <a href="freelancers.html" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium" data-id="mobile-nav-freelancers">Find Freelancers</a>
+        <a href="categories.html" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium" data-id="mobile-nav-categories">Categories</a>
+        <a href="jobs.html" class="text-gray-300 hover:text-cyan-400 transition-colors font-medium" data-id="mobile-nav-jobs">Browse Jobs</a>
+        <a href="about.html" class="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors" data-id="mobile-about">About</a>
+        <a href="contact.html" class="block px-3 py-2 text-gray-300 hover:text-cyan-400 transition-colors" data-id="mobile-contact">Contact</a>
+        <div class="px-3 py-4 border-t border-gray-700" data-id="mobile-auth">
+          <a href="login.html" class="block w-full text-center bg-gray-700 hover:bg-gray-600 text-white px-4 py-2 rounded-lg mb-2 transition-colors" data-id="mobile-login">Login</a>
+          <a href="signup.html" class="block w-full text-center bg-gradient-to-r from-cyan-500 to-purple-600 hover:from-cyan-600 hover:to-purple-700 text-white px-4 py-2 rounded-lg transition-all duration-300" data-id="mobile-signup">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

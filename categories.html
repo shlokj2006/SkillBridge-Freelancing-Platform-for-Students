@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Service Categories - Find Student Freelancers by Specialty | StudentFreelance Hub</title>
+  <meta name="description" content="Explore student freelancer categories: Web Development, Design, Writing, Marketing, Data Science, Mobile Development and more.">
+  <meta name="keywords" content="freelancer categories, web development students, student designers, content writers, digital marketing students">
+  
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'cyber-blue': '#00D4FF',
+            'electric-purple': '#8B5CF6',
+            'neon-green': '#10B981',
+            'dark-slate': '#0F172A',
+            'tech-gray': '#1E293B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-slate text-white font-sofia">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Header Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-cyber-blue/10 via-electric-purple/10 to-neon-green/10" data-id="categories-header">
+    <div class="container mx-auto px-4">
+      <div class="text-center">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="categories-title">
+          Service Categories
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-id="categories-subtitle">
+          Discover talented student freelancers across diverse digital service categories. Find the perfect match for your project needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="py-16" data-id="categories-grid-section">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-id="categories-grid">
+        
+        <!-- Web Development Category -->
+        <div class="bg-tech-gray/50 border border-cyber-blue/20 rounded-xl p-8 hover:border-cyber-blue/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-web-development" id="web-development">
+          <div class="w-16 h-16 bg-cyber-blue/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="code" class="w-8 h-8 text-cyber-blue"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-cyber-blue">Web Development</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">Modern websites, web applications, e-commerce platforms, and full-stack solutions built with the latest technologies.</p>
+          
+          <div class="space-y-3 mb-6">
+            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Popular Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">React</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Node.js</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Python</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">JavaScript</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">PHP</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">WordPress</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-sm text-gray-400">
+              <div class="font-semibold text-cyber-blue text-lg">150+ Freelancers</div>
+              <div>Starting from $15/hour</div>
+            </div>
+            <div class="text-sm text-gray-400 text-right">
+              <div class="font-semibold text-white">Avg. Rating</div>
+              <div class="flex items-center">
+                <div class="flex text-yellow-400 text-sm mr-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span>4.8</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="freelancers.html?category=web-development" class="w-full bg-gradient-to-r from-cyber-blue to-electric-purple text-white py-3 px-6 rounded-full font-semibold text-center hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300 block">
+            Browse Web Developers
+          </a>
+        </div>
+
+        <!-- Design & Creative Category -->
+        <div class="bg-tech-gray/50 border border-electric-purple/20 rounded-xl p-8 hover:border-electric-purple/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-design" id="design">
+          <div class="w-16 h-16 bg-electric-purple/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="palette" class="w-8 h-8 text-electric-purple"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-electric-purple">Design & Creative</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">UI/UX design, graphic design, branding, illustrations, and creative visual solutions for digital and print media.</p>
+          
+          <div class="space-y-3 mb-6">
+            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Popular Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Figma</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Adobe Creative Suite</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">UI/UX</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Branding</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Illustration</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Prototyping</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-sm text-gray-400">
+              <div class="font-semibold text-electric-purple text-lg">120+ Freelancers</div>
+              <div>Starting from $18/hour</div>
+            </div>
+            <div class="text-sm text-gray-400 text-right">
+              <div class="font-semibold text-white">Avg. Rating</div>
+              <div class="flex items-center">
+                <div class="flex text-yellow-400 text-sm mr-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span>4.9</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="freelancers.html?category=design" class="w-full bg-gradient-to-r from-electric-purple to-neon-green text-white py-3 px-6 rounded-full font-semibold text-center hover:shadow-lg hover:shadow-electric-purple/25 transform hover:scale-105 transition-all duration-300 block">
+            Browse Designers
+          </a>
+        </div>
+
+        <!-- Content & Writing Category -->
+        <div class="bg-tech-gray/50 border border-neon-green/20 rounded-xl p-8 hover:border-neon-green/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-writing" id="writing">
+          <div class="w-16 h-16 bg-neon-green/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="pen-tool" class="w-8 h-8 text-neon-green"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-neon-green">Content & Writing</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">Blog posts, articles, copywriting, technical documentation, creative writing, and content strategy services.</p>
+          
+          <div class="space-y-3 mb-6">
+            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Popular Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Copywriting</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Content Strategy</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">SEO Writing</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Technical Writing</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Blogging</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Editing</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-sm text-gray-400">
+              <div class="font-semibold text-neon-green text-lg">80+ Freelancers</div>
+              <div>Starting from $12/hour</div>
+            </div>
+            <div class="text-sm text-gray-400 text-right">
+              <div class="font-semibold text-white">Avg. Rating</div>
+              <div class="flex items-center">
+                <div class="flex text-yellow-400 text-sm mr-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span>4.7</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="freelancers.html?category=writing" class="w-full bg-gradient-to-r from-neon-green to-cyber-blue text-white py-3 px-6 rounded-full font-semibold text-center hover:shadow-lg hover:shadow-neon-green/25 transform hover:scale-105 transition-all duration-300 block">
+            Browse Writers
+          </a>
+        </div>
+
+        <!-- Digital Marketing Category -->
+        <div class="bg-tech-gray/50 border border-cyber-blue/20 rounded-xl p-8 hover:border-cyber-blue/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-marketing" id="marketing">
+          <div class="w-16 h-16 bg-cyber-blue/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="trending-up" class="w-8 h-8 text-cyber-blue"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-cyber-blue">Digital Marketing</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">SEO, social media marketing, PPC advertising, email marketing, analytics, and comprehensive digital marketing strategies.</p>
+          
+          <div class="space-y-3 mb-6">
+            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Popular Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">SEO</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Social Media</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Google Ads</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Analytics</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Email Marketing</span>
+              <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Content Marketing</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-sm text-gray-400">
+              <div class="font-semibold text-cyber-blue text-lg">60+ Freelancers</div>
+              <div>Starting from $16/hour</div>
+            </div>
+            <div class="text-sm text-gray-400 text-right">
+              <div class="font-semibold text-white">Avg. Rating</div>
+              <div class="flex items-center">
+                <div class="flex text-yellow-400 text-sm mr-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 stroke-current"></i>
+                </div>
+                <span>4.6</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="freelancers.html?category=marketing" class="w-full bg-gradient-to-r from-cyber-blue to-electric-purple text-white py-3 px-6 rounded-full font-semibold text-center hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300 block">
+            Browse Marketers
+          </a>
+        </div>
+
+        <!-- Data Science & Analytics -->
+        <div class="bg-tech-gray/50 border border-electric-purple/20 rounded-xl p-8 hover:border-electric-purple/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-data-science" id="data-science">
+          <div class="w-16 h-16 bg-electric-purple/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="bar-chart-3" class="w-8 h-8 text-electric-purple"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-electric-purple">Data Science & Analytics</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">Data analysis, machine learning, statistical modeling, data visualization, and business intelligence solutions.</p>
+          
+          <div class="space-y-3 mb-6">
+            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Popular Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Python</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">R</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Machine Learning</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">SQL</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Tableau</span>
+              <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Statistics</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-sm text-gray-400">
+              <div class="font-semibold text-electric-purple text-lg">45+ Freelancers</div>
+              <div>Starting from $25/hour</div>
+            </div>
+            <div class="text-sm text-gray-400 text-right">
+              <div class="font-semibold text-white">Avg. Rating</div>
+              <div class="flex items-center">
+                <div class="flex text-yellow-400 text-sm mr-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span>4.8</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="freelancers.html?category=data-science" class="w-full bg-gradient-to-r from-electric-purple to-neon-green text-white py-3 px-6 rounded-full font-semibold text-center hover:shadow-lg hover:shadow-electric-purple/25 transform hover:scale-105 transition-all duration-300 block">
+            Browse Data Scientists
+          </a>
+        </div>
+
+        <!-- Mobile Development -->
+        <div class="bg-tech-gray/50 border border-neon-green/20 rounded-xl p-8 hover:border-neon-green/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="category-mobile" id="mobile">
+          <div class="w-16 h-16 bg-neon-green/10 rounded-full flex items-center justify-center mb-6">
+            <i data-lucide="smartphone" class="w-8 h-8 text-neon-green"></i>
+          </div>
+          <h3 class="text-2xl font-bold mb-4 text-neon-green">Mobile Development</h3>
+          <p class="text-gray-300 mb-6 leading-relaxed">iOS and Android app development, cross-platform solutions, mobile UI/UX design, and app store optimization.</p>
+          
+          <div class="space-y-3 mb-6">
+            <h4 class="text-sm font-semibold text-gray-400 uppercase tracking-wide">Popular Skills</h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">React Native</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Flutter</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">iOS</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Android</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Swift</span>
+              <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Kotlin</span>
+            </div>
+          </div>
+
+          <div class="flex items-center justify-between mb-6">
+            <div class="text-sm text-gray-400">
+              <div class="font-semibold text-neon-green text-lg">35+ Freelancers</div>
+              <div>Starting from $20/hour</div>
+            </div>
+            <div class="text-sm text-gray-400 text-right">
+              <div class="font-semibold text-white">Avg. Rating</div>
+              <div class="flex items-center">
+                <div class="flex text-yellow-400 text-sm mr-1">
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                </div>
+                <span>4.9</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="freelancers.html?category=mobile" class="w-full bg-gradient-to-r from-neon-green to-cyber-blue text-white py-3 px-6 rounded-full font-semibold text-center hover:shadow-lg hover:shadow-neon-green/25 transform hover:scale-105 transition-all duration-300 block">
+            Browse Mobile Developers
+          </a>
+        </div>
+
+      </div>
+
+      <!-- CTA Section -->
+      <div class="text-center mt-16 bg-gradient-to-r from-cyber-blue/10 via-electric-purple/10 to-neon-green/10 rounded-xl p-8" data-id="categories-cta">
+        <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent">Can't Find Your Category?</h2>
+        <p class="text-gray-300 mb-6 max-w-2xl mx-auto">We're constantly expanding our service categories. Contact us to discuss your specific needs or browse all freelancers to find the right match.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="freelancers.html" class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300" data-id="browse-all-btn">
+            Browse All Freelancers
+          </a>
+          <a href="contact.html" class="border-2 border-cyber-blue text-cyber-blue px-8 py-3 rounded-full font-semibold hover:bg-cyber-blue hover:text-dark-slate transform hover:scale-105 transition-all duration-300" data-id="contact-btn">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    await loadComponent('#navbar-container');
+    await loadComponent('#footer-container');
+   
+    
+    // Initialize icons after components are loaded
+    lucide.createIcons();
+
+    // Handle category linking from URL hash
+    if (window.location.hash) {
+      const categoryElement = document.querySelector(window.location.hash);
+      if (categoryElement) {
+        setTimeout(() => {
+          categoryElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 100);
+      }
+    }
+  </script>
+</body>
+</html>

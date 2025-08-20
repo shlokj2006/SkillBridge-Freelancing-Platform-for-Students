@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Student Freelancers - Browse Professional Talent | StudentFreelance Hub</title>
+  <meta name="description" content="Browse verified student freelancers across web development, design, writing, marketing and more. Find the perfect talent for your project.">
+  <meta name="keywords" content="find student freelancers, hire student developers, student designers, freelance talent">
+  <meta property="og:title" content="Find Student Freelancers - Professional Talent">
+  <meta property="og:description" content="Browse verified student freelancers across multiple categories. Professional services at student-friendly rates.">
+  
+  <link rel="stylesheet" href="https://use.typekit.net/yjp3aho.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'sofia': ['sofia-pro', 'sans-serif'],
+          },
+          colors: {
+            'cyber-blue': '#00D4FF',
+            'electric-purple': '#8B5CF6',
+            'neon-green': '#10B981',
+            'dark-slate': '#0F172A',
+            'tech-gray': '#1E293B',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-dark-slate text-white font-sofia">
+  <!-- Navigation -->
+  <div id="navbar-container" data-source="components/navbar.html"></div>
+
+  <!-- Header Section -->
+  <section class="pt-32 pb-16 bg-gradient-to-br from-cyber-blue/10 via-electric-purple/10 to-neon-green/10" data-id="freelancers-header">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyber-blue to-electric-purple bg-clip-text text-transparent" data-id="freelancers-title">
+          Find Student Freelancers
+        </h1>
+        <p class="text-xl text-gray-300 max-w-3xl mx-auto" data-id="freelancers-subtitle">
+          Browse verified student talent across multiple categories. Professional services, competitive rates, fresh perspectives.
+        </p>
+      </div>
+
+      <!-- Search and Filters -->
+      <div class="max-w-4xl mx-auto" data-id="search-filters">
+        <div class="bg-tech-gray/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+            <div class="md:col-span-2">
+              <div class="relative">
+                <i data-lucide="search" class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"></i>
+                <input type="text" placeholder="Search freelancers..." class="w-full bg-dark-slate border border-gray-600 rounded-lg pl-10 pr-4 py-3 text-white placeholder-gray-400 focus:border-cyber-blue focus:outline-none" data-id="search-input">
+              </div>
+            </div>
+            <div>
+              <select class="w-full bg-dark-slate border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-cyber-blue focus:outline-none" data-id="category-filter">
+                <option value="">All Categories</option>
+                <option value="web-development">Web Development</option>
+                <option value="design">Design & Creative</option>
+                <option value="writing">Content & Writing</option>
+                <option value="marketing">Digital Marketing</option>
+                <option value="data">Data & Analytics</option>
+                <option value="mobile">Mobile Development</option>
+              </select>
+            </div>
+            <div>
+              <select class="w-full bg-dark-slate border border-gray-600 rounded-lg px-4 py-3 text-white focus:border-cyber-blue focus:outline-none" data-id="experience-filter">
+                <option value="">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Freelancers Grid -->
+  <section class="py-16" data-id="freelancers-grid-section">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" data-id="freelancers-grid">
+        
+        <!-- Freelancer Card 1 -->
+        <div class="bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="freelancer-card-1">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face" alt="Alex Johnson" class="w-16 h-16 rounded-full object-cover border-2 border-cyber-blue/30">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Alex Johnson</h3>
+                <p class="text-gray-400 text-sm">Computer Science • MIT</p>
+                <div class="flex items-center mt-1">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm ml-2">(4.9)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-cyber-blue font-bold">$25/hr</div>
+              <div class="w-3 h-3 bg-neon-green rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-4 line-clamp-3">Full-stack developer specializing in React, Node.js, and modern web technologies. Experienced in building scalable applications.</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">React</span>
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Node.js</span>
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Python</span>
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">AWS</span>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-400">
+              <span>15 projects completed</span>
+            </div>
+            <a href="freelancer-profile.html?id=alex-johnson" class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300">
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Freelancer Card 2 -->
+        <div class="bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-electric-purple/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="freelancer-card-2">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face" alt="Sarah Chen" class="w-16 h-16 rounded-full object-cover border-2 border-electric-purple/30">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Sarah Chen</h3>
+                <p class="text-gray-400 text-sm">Design • Stanford</p>
+                <div class="flex items-center mt-1">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm ml-2">(5.0)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-electric-purple font-bold">$30/hr</div>
+              <div class="w-3 h-3 bg-neon-green rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-4 line-clamp-3">UI/UX designer with expertise in creating beautiful, user-friendly interfaces. Specializing in mobile and web design.</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Figma</span>
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Adobe XD</span>
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Prototyping</span>
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">UI/UX</span>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-400">
+              <span>22 projects completed</span>
+            </div>
+            <a href="freelancer-profile.html?id=sarah-chen" class="bg-gradient-to-r from-electric-purple to-neon-green text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-electric-purple/25 transform hover:scale-105 transition-all duration-300">
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Freelancer Card 3 -->
+        <div class="bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-neon-green/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="freelancer-card-3">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face" alt="Marcus Rodriguez" class="w-16 h-16 rounded-full object-cover border-2 border-neon-green/30">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Marcus Rodriguez</h3>
+                <p class="text-gray-400 text-sm">Marketing • NYU</p>
+                <div class="flex items-center mt-1">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 stroke-current"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm ml-2">(4.8)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-neon-green font-bold">$20/hr</div>
+              <div class="w-3 h-3 bg-neon-green rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-4 line-clamp-3">Digital marketing specialist with focus on social media, SEO, and content strategy. Helped brands grow their online presence.</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">SEO</span>
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Social Media</span>
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Analytics</span>
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Content</span>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-400">
+              <span>18 projects completed</span>
+            </div>
+            <a href="freelancer-profile.html?id=marcus-rodriguez" class="bg-gradient-to-r from-neon-green to-cyber-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-neon-green/25 transform hover:scale-105 transition-all duration-300">
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Freelancer Card 4 -->
+        <div class="bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-cyber-blue/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="freelancer-card-4">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face" alt="Emily Taylor" class="w-16 h-16 rounded-full object-cover border-2 border-cyber-blue/30">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Emily Taylor</h3>
+                <p class="text-gray-400 text-sm">Journalism • Columbia</p>
+                <div class="flex items-center mt-1">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm ml-2">(4.9)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-cyber-blue font-bold">$22/hr</div>
+              <div class="w-3 h-3 bg-yellow-400 rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-4 line-clamp-3">Professional content writer and copywriter. Experienced in creating engaging content for blogs, websites, and marketing materials.</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Copywriting</span>
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Content Strategy</span>
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">SEO Writing</span>
+            <span class="bg-cyber-blue/10 text-cyber-blue text-xs px-2 py-1 rounded-full">Blogging</span>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-400">
+              <span>31 projects completed</span>
+            </div>
+            <a href="freelancer-profile.html?id=emily-taylor" class="bg-gradient-to-r from-cyber-blue to-electric-purple text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-cyber-blue/25 transform hover:scale-105 transition-all duration-300">
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Freelancer Card 5 -->
+        <div class="bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-electric-purple/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="freelancer-card-5">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face" alt="David Kim" class="w-16 h-16 rounded-full object-cover border-2 border-electric-purple/30">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">David Kim</h3>
+                <p class="text-gray-400 text-sm">Data Science • UC Berkeley</p>
+                <div class="flex items-center mt-1">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 stroke-current"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm ml-2">(4.7)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-electric-purple font-bold">$35/hr</div>
+              <div class="w-3 h-3 bg-neon-green rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-4 line-clamp-3">Data scientist and machine learning engineer. Expert in Python, R, and advanced analytics for business insights.</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Python</span>
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Machine Learning</span>
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">R</span>
+            <span class="bg-electric-purple/10 text-electric-purple text-xs px-2 py-1 rounded-full">Analytics</span>
+          </div>
+
+          <div class="flex justify-between items-centers">
+            <div class="text-sm text-gray-400">
+              <span>9 projects completed</span>
+            </div>
+            <a href="freelancer-profile.html?id=david-kim" class="bg-gradient-to-r from-electric-purple to-neon-green text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-electric-purple/25 transform hover:scale-105 transition-all duration-300">
+              View Profile
+            </a>
+          </div>
+        </div>
+
+        <!-- Freelancer Card 6 -->
+        <div class="bg-tech-gray/50 border border-gray-700 rounded-xl p-6 hover:border-neon-green/50 hover:bg-tech-gray/70 transform hover:scale-105 transition-all duration-300" data-id="freelancer-card-6">
+          <div class="flex items-start justify-between mb-4">
+            <div class="flex items-center space-x-4">
+              <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop&crop=face" alt="Jessica Wang" class="w-16 h-16 rounded-full object-cover border-2 border-neon-green/30">
+              <div>
+                <h3 class="text-xl font-bold text-white mb-1">Jessica Wang</h3>
+                <p class="text-gray-400 text-sm">Mobile Dev • Carnegie Mellon</p>
+                <div class="flex items-center mt-1">
+                  <div class="flex text-yellow-400 text-sm">
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                    <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                  </div>
+                  <span class="text-gray-400 text-sm ml-2">(5.0)</span>
+                </div>
+              </div>
+            </div>
+            <div class="text-right">
+              <div class="text-neon-green font-bold">$28/hr</div>
+              <div class="w-3 h-3 bg-neon-green rounded-full mt-1"></div>
+            </div>
+          </div>
+
+          <p class="text-gray-300 text-sm mb-4 line-clamp-3">Mobile app developer specializing in iOS and Android development. Experience with React Native and native development.</p>
+
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">React Native</span>
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">iOS</span>
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Android</span>
+            <span class="bg-neon-green/10 text-neon-green text-xs px-2 py-1 rounded-full">Swift</span>
+          </div>
+
+          <div class="flex justify-between items-center">
+            <div class="text-sm text-gray-400">
+              <span>12 projects completed</span>
+            </div>
+            <a href="freelancer-profile.html?id=jessica-wang" class="bg-gradient-to-r from-neon-green to-cyber-blue text-white px-4 py-2 rounded-full text-sm font-semibold hover:shadow-lg hover:shadow-neon-green/25 transform hover:scale-105 transition-all duration-300">
+              View Profile
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Pagination -->
+      <div class="flex justify-center items-center mt-16 space-x-2" data-id="pagination">
+        <button class="bg-tech-gray border border-gray-600 text-gray-400 px-4 py-2 rounded-lg hover:border-cyber-blue hover:text-cyber-blue transition-colors" data-id="prev-page">
+          <i data-lucide="chevron-left" class="w-5 h-5"></i>
+        </button>
+        <button class="bg-cyber-blue text-white px-4 py-2 rounded-lg font-semibold" data-id="page-1">1</button>
+        <button class="bg-tech-gray border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:border-cyber-blue hover:text-cyber-blue transition-colors" data-id="page-2">2</button>
+        <button class="bg-tech-gray border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:border-cyber-blue hover:text-cyber-blue transition-colors" data-id="page-3">3</button>
+        <span class="text-gray-400 px-2">...</span>
+        <button class="bg-tech-gray border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:border-cyber-blue hover:text-cyber-blue transition-colors" data-id="page-12">12</button>
+        <button class="bg-tech-gray border border-gray-600 text-gray-300 px-4 py-2 rounded-lg hover:border-cyber-blue hover:text-cyber-blue transition-colors" data-id="next-page">
+          <i data-lucide="chevron-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer-container" data-source="components/footer.html"></div>
+
+  <!-- Badge -->
+  <div id="badge-container" data-source="components/badge.html"></div>
+
+  <script type="module">
+    import { loadComponent } from './scripts/components/loader.js';
+    
+    // Load all shared components
+    await loadComponent('#navbar-container');
+    await loadComponent('#footer-container');
+   
+    
+    // Initialize icons after components are loaded
+    lucide.createIcons();
+    
+    // Initialize search and filter functionality
+    initializeFilters();
+
+    function initializeFilters() {
+      const searchInput = document.querySelector('[data-id="search-input"]');
+      const categoryFilter = document.querySelector('[data-id="category-filter"]');
+      const experienceFilter = document.querySelector('[data-id="experience-filter"]');
+
+      // Add event listeners for real-time filtering
+      searchInput?.addEventListener('input', handleSearch);
+      categoryFilter?.addEventListener('change', handleFilter);
+      experienceFilter?.addEventListener('change', handleFilter);
+
+      function handleSearch(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const freelancerCards = document.querySelectorAll('[data-id^="freelancer-card-"]');
+        
+        freelancerCards.forEach(card => {
+          const name = card.querySelector('h3').textContent.toLowerCase();
+          const skills = Array.from(card.querySelectorAll('.bg-cyber-blue\\/10, .bg-electric-purple\\/10, .bg-neon-green\\/10'))
+            .map(skill => skill.textContent.toLowerCase()).join(' ');
+          
+          if (name.includes(searchTerm) || skills.includes(searchTerm)) {
+            card.style.display = 'block';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      }
+
+      function handleFilter() {
+        // Implementation for category and experience filtering
+        console.log('Filter applied:', categoryFilter.value, experienceFilter.value);
+      }
+    }
+  </script>
+</body>
+</html>
