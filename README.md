@@ -4,6 +4,9 @@ A community-driven platform designed to connect freelancers and clients, foster 
 
 ---
 
+## livelink 
+https://skillbridge404.netlify.app/freelancers.html
+
 ## 🚀 Overview
 
 Freelancing Community Project is a web-based application focused on building an active network of freelancers who want to display their skills, find projects, and connect with clients. The platform enables users to create profiles, share portfolios, browse job postings, and communicate effectively for successful collaborations.
