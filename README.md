@@ -60,6 +60,7 @@ Freelancing-Community-Project/
 ├── assets/
 │   ├── images/
 │   └── scripts/
+    
 └── README.md
 ```
 
@@ -81,6 +82,10 @@ You can modify and expand the code as needed. For advanced usage, integrate back
 Contributions are welcome! Feel free to fork this repository, suggest features, or open pull requests to improve the platform.
 
 ---
+## Team Members
+Shlok jaiswal
+Jagruti Pandey
+Sabyasachi Nayak
 
 ## 📄 License
 
@@ -94,7 +99,9 @@ Want to learn more, suggest features, or join the community?
 - GitHub: [shlokj2006](https://github.com/shlokj2006)
 - Discussions/Issues: Use the Issues tab in this repository
 
+
 ---
+
 
 *Thank you for checking out Freelancing Community Project!*
 
