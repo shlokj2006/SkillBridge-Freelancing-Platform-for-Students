@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>SkillBridge Navbar</title>
-<script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-950 text-white">
 
-  <!-- Fix loader.js -->
+  <!-- Badge container (do not place nav inside here) -->
   <div id="badge-container" data-source="components/empty.html"></div>
 
   <!-- Navbar -->
@@ -38,8 +38,8 @@
         </button>
       </div>
 
-      <!-- Mobile menu -->
-      <div class="hidden md:hidden py-4 border-t border-gray-800" data-id="mobile-nav">
+      <!-- Mobile menu (hidden on load, shows when toggled) -->
+      <div class="hidden py-4 border-t border-gray-800 md:hidden" data-id="mobile-nav">
         <div class="flex flex-col space-y-4">
           <a href="#" class="hover:text-cyan-400">Find Freelancers</a>
           <a href="#" class="hover:text-cyan-400">Categories</a>
@@ -53,31 +53,29 @@
 
   <!-- Scripts -->
   <script src="https://unpkg.com/lucide@latest"></script>
-
-  <!-- Load loader.js then attach navbar toggle -->
   <script type="module">
     import { loadComponents } from "./loader.js";
-
     document.addEventListener("DOMContentLoaded", async () => {
-      // Load badge container first
+      // Safe: loader.js only fills #badge-container, not the navbar itself!
       await loadComponents(["#badge-container"]);
-
-      // Attach mobile menu toggle
       const menuButton = document.querySelector('[data-id="mobile-menu-toggle"]');
       const mobileNav = document.querySelector('[data-id="mobile-nav"]');
-
       if (!menuButton || !mobileNav) {
         console.error("Navbar toggle elements not found");
         return;
       }
-
       menuButton.addEventListener("click", () => {
         mobileNav.classList.toggle("hidden");
-        console.log("Menu toggled");
+        // Icon toggle logic
+        const icon = menuButton.querySelector("i");
+        icon.setAttribute(
+          "data-lucide",
+          mobileNav.classList.contains("hidden") ? "menu" : "x"
+        );
+        lucide.createIcons();
       });
     });
   </script>
-
   <script>
     lucide.createIcons();
   </script>
