@@ -45,23 +45,35 @@ Freelancing Community Project is a web-based application focused on building an 
 - JavaScript: Interactivity and logic
 - Tailwind : For Css Library
 - Lucid Library : For Icons assets
-- React : Used as library for  components
+
 ---
 
 ## 📂 Project Structure
 
-```
-Freelancing-Community-Project/
-├── index.html
-├── about.html
-├── profile.html
-├── projects.html
-├── contact.html
-├── assets/
+SkillBridge/
+├── index.html              # Home page
+├── about.html              # About page
+├── projects.html           # Projects listing page
+├── profile.html            # User profile page
+├── contact.html            # Contact page
+├── assets/                 # All static assets
+│   ├── css/
+│   │   ├── style.css       # Main CSS file
+│   │   └── tailwind.css    # Tailwind CSS (if used)
+│   ├── js/
+│   │   ├── main.js         # Main JavaScript file
+│   │   └── scripts.js      # Additional JS for interactions
 │   ├── images/
-│   └── scripts/
-    
-└── README.md
+│   │   └── logo.png        # Logos, banners, and icons
+│   └── icons/              # Lucid Icons or custom icons
+├── backend/ (planned)      # Future backend folder
+│   ├── server.js           # Server entry (Node.js/Express)
+│   ├── routes/             # API routes
+│   ├── controllers/        # Business logic
+│   └── models/             # Database models
+├── README.md               # Project documentation
+└── .gitignore
+
 ```
 
 ---
@@ -84,13 +96,30 @@ Contributions are welcome! Feel free to fork this repository, suggest features, 
 ---
 ## Team Members
 Shlok jaiswal
+Abdulrauf shaikh
 Jagruti Pandey
 Sabyasachi Nayak
 
 
-## 📄 License
 
-This project is licensed under the Apache-2.0 License.
+## License
+
+This project is licensed under the Apache License 2.0.
+
+You are free to use, modify, and distribute this project, even in commercial applications, as long as you:
+
+Include a copy of the license in any redistribution.
+
+Give proper credit to the original authors.
+
+Indicate if you made any changes.
+
+The software is provided “as-is” without any warranties, and the license does not grant rights to use the project’s trademarks.
+
+For full details, see the Apache License 2.0
+.
+
+
 
 ---
 
